@@ -1,4 +1,4 @@
-# Senior Product Designer Portfolio
+# Lead Product Designer Portfolio
 
 A modern, responsive portfolio website showcasing design work, case studies, and expertise of a Senior Product Designer.
 
