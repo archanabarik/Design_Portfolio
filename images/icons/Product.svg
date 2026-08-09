@@ -1,0 +1,27 @@
+<svg width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Repeat group 1_inner" data-figma-trr="r21u1-0f">
+<g clip-path="url(#paint0_angular_171_3403_clip_path)" data-figma-skip-parse="true"><g transform="matrix(0.000177796 -0.0105062 -0.00140931 -0.00152638 108.013 58.0971)"><foreignObject x="-5388.56" y="-5388.56" width="10777.1" height="10777.1"><div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 90deg,rgba(102, 49, 146, 1) 0deg,rgba(108, 53, 152, 1) 22.5deg,rgba(214, 178, 241, 1) 86.5385deg,rgba(49, 15, 83, 1) 150.577deg,rgba(102, 49, 146, 1) 360deg);height:100%;width:100%;opacity:1"></div></foreignObject></g></g><rect x="101.762" y="8.19434" width="12.4757" height="99.8056" data-figma-gradient-fill="{&#34;type&#34;:&#34;GRADIENT_ANGULAR&#34;,&#34;stops&#34;:[{&#34;color&#34;:{&#34;r&#34;:0.42417925596237183,&#34;g&#34;:0.20863325893878937,&#34;b&#34;:0.59953236579895020,&#34;a&#34;:1.0},&#34;position&#34;:0.06250},{&#34;color&#34;:{&#34;r&#34;:0.84266740083694458,&#34;g&#34;:0.69980615377426147,&#34;b&#34;:0.94574445486068726,&#34;a&#34;:1.0},&#34;position&#34;:0.24038460850715637},{&#34;color&#34;:{&#34;r&#34;:0.19215686619281769,&#34;g&#34;:0.058823529630899429,&#34;b&#34;:0.32549020648002625,&#34;a&#34;:1.0},&#34;position&#34;:0.41826921701431274}],&#34;stopsVar&#34;:[{&#34;color&#34;:{&#34;r&#34;:0.42417925596237183,&#34;g&#34;:0.20863325893878937,&#34;b&#34;:0.59953236579895020,&#34;a&#34;:1.0},&#34;position&#34;:0.06250},{&#34;color&#34;:{&#34;r&#34;:0.84266740083694458,&#34;g&#34;:0.69980615377426147,&#34;b&#34;:0.94574445486068726,&#34;a&#34;:1.0},&#34;position&#34;:0.24038460850715637},{&#34;color&#34;:{&#34;r&#34;:0.19215686619281769,&#34;g&#34;:0.058823529630899429,&#34;b&#34;:0.32549020648002625,&#34;a&#34;:1.0},&#34;position&#34;:0.41826921701431274}],&#34;transform&#34;:{&#34;m00&#34;:0.35559198260307312,&#34;m01&#34;:-2.8186125755310059,&#34;m02&#34;:109.24404907226562,&#34;m10&#34;:-21.012311935424805,&#34;m11&#34;:-3.0527658462524414,&#34;m12&#34;:70.129684448242188},&#34;opacity&#34;:1.0,&#34;blendMode&#34;:&#34;NORMAL&#34;,&#34;visible&#34;:true}"/>
+</g>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(36.6317 -27.0355) rotate(17.1429)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(79.6048 -42.0726) rotate(34.2857)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(125.101 -43.775) rotate(51.4286)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(169.078 -31.9916) rotate(68.5714)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(207.627 -7.76933) rotate(85.7143)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(237.325 26.7395) rotate(102.857)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(255.531 68.4688) rotate(120)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(260.629 113.711) rotate(137.143)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(252.165 158.445) rotate(154.286)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(230.891 198.697) rotate(171.429)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(198.698 230.89) rotate(-171.429)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(158.446 252.164) rotate(-154.286)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(113.712 260.628) rotate(-137.143)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(68.4699 255.531) rotate(-120)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(26.7406 237.325) rotate(-102.857)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(-7.76842 207.627) rotate(-85.7143)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(-31.9908 169.078) rotate(-68.5714)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(-43.7745 125.101) rotate(-51.4286)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(-42.0722 79.605) rotate(-34.2857)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(-27.0353 36.6317) rotate(-17.1428)"/>
+<defs>
+<clipPath id="paint0_angular_171_3403_clip_path"><rect x="101.762" y="8.19434" width="12.4757" height="99.8056"/></clipPath></defs>
+</svg>

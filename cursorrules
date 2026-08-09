@@ -1,0 +1,73 @@
+# Cursor Rules — Portfolio Site Consistency Lock
+# Purpose: Ensure all new/edited pages keep identical header/nav/footer, styling, theme, and JS behaviors.
+# Scope: Static HTML pages using Webflow classes + css/min.css + main.js + parallax.js
+
+## Canonical Sources (read before changes)
+- index.html (home)
+- about.html
+- contact.html
+- design.html
+- css/min.css
+- js/parallax.js
+- js/main.js
+- (Ignore script.js unless explicitly requested; it uses a different nav system.)
+
+## Hard Constraints (NON-NEGOTIABLE)
+1) **Navbar must be reused verbatim**
+   - Copy the entire `<div data-collapse="medium" ... class="navbar w-nav"> ... </div>` block exactly.
+   - Do not rename/remove Webflow classes: `w-nav`, `w-nav-menu`, `w-nav-button`, `w-icon-nav-menu`, `w-container`.
+   - Do not change Webflow data-attributes: `data-collapse`, `data-animation`, `data-duration`, `data-easing`, `data-easing2`, `data-doc-height`.
+
+2) **Footer must be reused verbatim**
+   - Copy the entire `<div class="footer"> ... </div>` block exactly.
+   - Do not alter structure/classes: `.footer-wrapper`, `.footer-content`, `.footer-row`, `.social-icons-list`, `.footersocialicons`.
+
+3) **Design system lock**
+   - All styling must come from `css/min.css`.
+   - Do not add new CSS files.
+   - Do not add inline styles (except copying existing embedded `<style>` blocks from canonical pages as-is).
+   - Do not introduce new fonts or new font imports.
+   - Do not introduce new colors (no new hex/rgb values). Use existing CSS variables/classes.
+
+4) **Body/background lock**
+   - Every page must use `<body class="body">`.
+   - Do not override body background or global typography.
+
+5) **Script order lock**
+   - Preserve the same bottom-of-page script order used on the canonical pages:
+     jQuery → Webflow chunks → Webflow main → optional libs (e.g., CircleType) → custom init.
+   - Do not reorder or remove Webflow scripts.
+
+6) **JS architecture lock**
+   - Prefer `js/main.js` as the single source of behavior (menu toggle, smooth scroll, navbar shadow, etc.).
+   - Do not duplicate behaviors in-page (no extra menu toggles, no additional smooth scroll handlers).
+   - Use `js/parallax.js` only via `[data-parallax]` attributes; do not add additional scroll listeners.
+
+7) **CircleType safety**
+   - Only initialize CircleType if the target element exists (guard it).
+   - Do not add CircleType init to pages that do not contain `#circletext`.
+
+## Required Page Construction Pattern
+- Copy `<head>` structure from index.html or the most relevant canonical page.
+  - Allowed edits: `<title>`, meta description, OG/Twitter title/description.
+  - Keep CSS include to `css/min.css` (path must match existing site routing).
+  - Keep WebFont loader pattern if used in canonical page.
+- Insert new content ONLY between navbar and footer.
+- Use existing layout classes/patterns: `section`, `container`, `w-container`, existing grid classes.
+- No new frameworks (Tailwind/Bootstrap/etc.).
+
+## Output Requirements (for assistant responses)
+When generating a new page or modifying a page:
+1) List files created/changed.
+2) Provide full contents for any NEW file.
+3) Provide a short validation checklist confirming:
+   - navbar identical to canonical
+   - footer identical to canonical
+   - no new CSS/fonts/colors
+   - script order preserved
+   - no duplicated JS behaviors
+
+## Refactor Guidance (optional)
+If asked to reduce duplication:
+- Propose extracting header/footer into partials/includes ONLY if the build setup supports it.
+- Otherwise, keep verbatim copies across pages.

@@ -1,0 +1,16 @@
+{
+  "name": "myspace-test",
+  "version": "1.0.0",
+  "description": "A modern, responsive portfolio website showcasing design work, case studies, and expertise of a Senior Product Designer.",
+  "main": "capture-screenshots.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "puppeteer": "^24.37.3"
+  }
+}

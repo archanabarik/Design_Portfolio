@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.cursor/
+
+# GitHub rejects files over 100MB
+videos/Slice-proto.mov

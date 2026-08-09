@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Slice — Onboarding redesign | Case Study | Archana Kumari</title>
+  <meta
+    content="Redesigned Slice's onboarding to meet RBI KYC requirements while removing friction — 82% completion (from 45%), 20% drop-off reduction, 40% under 2 minutes."
+    name="description" />
+  <meta content="Slice — Onboarding redesign | Case Study | Archana Kumari" property="og:title" />
+  <meta
+    content="Redesigned Slice's onboarding to meet RBI KYC requirements while removing friction — 82% completion from 45% baseline."
+    property="og:description" />
+  <meta content="" property="og:image" />
+  <meta content="Slice — Onboarding redesign | Case Study | Archana Kumari" property="twitter:title" />
+  <meta
+    content="Redesigned Slice's onboarding to meet RBI KYC requirements while removing friction — 82% completion from 45% baseline."
+    property="twitter:description" />
+  <meta content="" property="twitter:image" />
+  <meta property="og:type" content="website" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png?v=20260808a" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png?v=20260808a" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png?v=20260808a" />
+  <link rel="icon" href="/images/favicon_io/favicon.ico?v=20260808a" sizes="any" />
+  <link rel="manifest" href="/images/favicon_io/site.webmanifest?v=20260808a" />
+  <link href="/css/min.css" rel="stylesheet" type="text/css" />
+  <link href="/css/project-style.css?v=20260809l" rel="stylesheet" type="text/css" />
+  <style>
+    @media (min-width:992px) {
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="5a52ea51-eb95-dfaf-fe5d-dfb23e15e9ec"] {
+        -webkit-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+      }
+    }
+
+    @media (max-width:991px) and (min-width:768px) {
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="5a52ea51-eb95-dfaf-fe5d-dfb23e15e9ec"] {
+        -webkit-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+      }
+    }
+
+    @media (max-width:767px) and (min-width:480px) {
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="5a52ea51-eb95-dfaf-fe5d-dfb23e15e9ec"] {
+        -webkit-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+      }
+    }
+
+    @media (max-width:479px) {
+      html.w-mod-js:not(.w-mod-ix) [data-w-id="5a52ea51-eb95-dfaf-fe5d-dfb23e15e9ec"] {
+        -webkit-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -moz-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        -ms-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    WebFont.load({ google: { families: ["Caveat:regular", "Space Mono:regular", "Inter Tight:regular,500,600,700,800"] } });
+  </script>
+  <style>
+    .frosty {
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    .text-xxl-outline {
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+    }
+
+    /* Slice layout helpers — aligned to ACKO case-study style */
+    .slice-cs {
+      --accent: #b91c1c;
+      --accent-light: #f3f4f6;
+      --green: #16a34a;
+      --green-light: #e8f5ef;
+      --green-dark: #16a34a;
+      --red: #b91c1c;
+      --red-light: #fef2f2;
+      --amber: #b54708;
+      --amber-light: #fffaeb;
+      --amber-dark: #b54708;
+      --text: #111111;
+      --text-muted: #4b5563;
+      --bg: #ffffff;
+      --border: #e5e7eb;
+      --bg-surface: #ffffff;
+      --callout-bg: #faf8f5;
+      background: #ffffff;
+    }
+
+    .slice-tag-purple,
+    .slice-tag,
+    .slice-box-tag,
+    .slice-decision-badge,
+    .slice-flow-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      background: var(--accent-light);
+      color: #374151;
+    }
+
+    .slice-snapshot-grid,
+    .slice-problem-opp,
+    .slice-persona-grid,
+    .slice-decision-body {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 24px 0 0;
+    }
+
+    .slice-snapshot-item {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .slice-snapshot-item span {
+      color: var(--text-muted);
+      display: block;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    .slice-problem-box {
+      border-radius: 16px;
+      padding: 20px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+    }
+
+    .slice-opp-box {
+      border-radius: 16px;
+      padding: 20px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+    }
+
+    .slice-box-tag-red { color: var(--red); }
+    .slice-box-tag-green { color: var(--green-dark); }
+    .slice-box-tag-purple { color: var(--accent); }
+
+    .slice-problem-opp h4 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 6px;
+      line-height: 1.25;
+    }
+
+    .slice-problem-box h4 { color: var(--red); }
+    .slice-opp-box h4 { color: var(--text); }
+
+    .slice-problem-opp p {
+      font-size: 16px;
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    .slice-problem-box p,
+    .slice-opp-box p { color: var(--text-muted); }
+
+    .slice-flow-panel {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 20px 0;
+    }
+
+    .slice-flow-label {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin: 0 0 16px;
+    }
+
+    .slice-flow-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .slice-flow-row:last-child { margin-bottom: 0; }
+
+    .slice-flow-step {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .slice-flow-step.is-drop {
+      background: var(--red-light);
+      border-color: #fecdca;
+      color: var(--red);
+    }
+
+    .slice-flow-step.is-auto {
+      background: var(--amber-light);
+      border-color: #fedf89;
+      color: var(--amber-dark);
+    }
+
+    .slice-flow-step.is-end {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .slice-flow-step.is-soft {
+      background: #ffffff;
+      border-color: var(--border);
+      color: var(--accent);
+    }
+
+    .slice-flow-arrow {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .slice-flow-vertical {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .slice-flow-vline {
+      width: 1px;
+      height: 16px;
+      background: var(--border);
+    }
+
+    .slice-flow-branch {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      margin: 8px 0;
+    }
+
+    .slice-flow-branch-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .slice-persona-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      background: var(--bg);
+    }
+
+    .slice-persona-meta {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .slice-persona-name {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 4px;
+      color: var(--text);
+    }
+
+    .slice-persona-role {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0 0 16px;
+      line-height: 1.45;
+    }
+
+    .slice-persona-list {
+      margin: 0 0 16px;
+      padding-left: 1.1rem;
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .slice-persona-quote {
+      margin: 0;
+      padding: 14px 16px;
+      background: var(--callout-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--accent);
+      line-height: 1.5;
+    }
+
+    .slice-insight {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .slice-insight:last-child { border-bottom: none; }
+
+    .slice-insight-num {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    .slice-insight-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 0 6px;
+      color: var(--text);
+    }
+
+    .slice-insight-detail {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .slice-decision-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--bg);
+    }
+
+    .slice-decisions {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .slice-decision-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 16px 20px;
+      background: var(--callout-bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .slice-decision-card:has(.slice-decision-badge.reject) .slice-decision-head {
+      background: var(--red-light);
+    }
+
+    .slice-decision-card:has(.slice-decision-badge.accept) .slice-decision-head {
+      background: var(--green-light);
+    }
+
+    .slice-decision-title {
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .slice-decision-badge {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .slice-decision-badge.reject {
+      background: var(--red-light);
+      color: var(--red);
+    }
+
+    .slice-decision-badge.accept {
+      background: var(--green-light);
+      color: var(--green-dark);
+    }
+
+    .slice-decision-col {
+      padding: 16px 20px;
+      border-right: 1px solid var(--border);
+    }
+
+    .slice-decision-col:last-child { border-right: none; }
+
+    .slice-decision-col-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: var(--text-muted);
+    }
+
+    .slice-decision-col p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text);
+    }
+
+    .slice-results-table {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 20px 0 28px;
+    }
+
+    .slice-results-row {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 0.7fr 0.8fr;
+      gap: 8px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .slice-results-row:last-child { border-bottom: none; }
+
+    .slice-results-row.is-head {
+      background: var(--bg-surface);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .slice-results-status {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--green-dark);
+      background: var(--green-light);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .slice-why-list {
+      margin: 16px 0 0;
+      padding-left: 1.2rem;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-muted);
+    }
+
+    .slice-why-list li { margin-bottom: 10px; color: var(--gray-2); }
+    .slice-why-list li:last-child { margin-bottom: 0; }
+
+    .slice-learnings {
+      background: var(--callout-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-top: 8px;
+    }
+
+    .slice-learnings .slice-box-tag {
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .slice-learnings ul {
+      margin: 0;
+      padding-left: 1.15rem;
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .slice-learnings li { margin-bottom: 10px; }
+    .slice-learnings li:last-child { margin-bottom: 0; }
+
+    .slice-outcome-line {
+      margin-top: 10px;
+      color: var(--accent);
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .slice-proto-video-wrap {
+      width: 100%;
+      height: 560px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f3f4f6;
+    }
+
+    .slice-proto-video {
+      width: 100%;
+      height: 106%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+      margin-top: -3%;
+    }
+
+    @media (max-width: 767px) {
+      .slice-decision-col {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .slice-decision-col:last-child { border-bottom: none; }
+
+      .slice-results-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .slice-results-row.is-head { display: none; }
+
+      .slice-flow-branch { gap: 24px; }
+    }
+
+  </style>
+</head>
+
+<body class="body">
+  <div class="html-embed w-embed">
+    <style>
+      .frosty-menu {
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+      }
+    </style>
+  </div>
+
+  <!-- Navbar -->
+  <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+    data-doc-height="1" role="banner" class="navbar w-nav">
+    <div class="nav-container w-container">
+      <a href="/" id="w-node-_342705f2-0700-67ad-02be-ebd79fc25525-9fc25523" aria-current="page"
+        class="brand w-nav-brand w--current">
+        <img src="/images/icons/bharath-logo.png" loading="lazy" width="180" alt="Archana Kumari" class="navbar-logo" />
+      </a>
+      <nav role="navigation" class="frosty-menu w-nav-menu">
+        <div class="nav-link-wrapper">
+          <a href="/about.html" class="nav-link w-nav-link">About</a>
+        </div>
+        <div class="nav-link-wrapper">
+          <a href="/Works/design.html" class="nav-link w-nav-link">Work</a>
+        </div>
+        <div class="nav-link-wrapper">
+          <a href="/contact.html" class="nav-link w-nav-link">Contact</a>
+        </div>
+      </nav>
+      <div id="w-node-_342705f2-0700-67ad-02be-ebd79fc25534-9fc25523" class="menu-button w-nav-button">
+        <div class="icon w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section pt-120 pb-0 section-overflow-visible slice-cs">
+    <div class="w-container">
+      <h1 class="cs-title">Turning a compliance-heavy flow into an 82% completion rate</h1>
+      <p class="cs-body">Redesigned Slice's onboarding experience to meet RBI KYC requirements while removing the friction that was causing over half of users to abandon before activation.</p>
+    </div>
+
+    <div class="container"><img src="/images/Projects/slice/slice-thumnail-desktop.webp" loading="lazy"
+        sizes="(max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"
+        alt="Slice onboarding redesign"
+        class="cs-cover-image" />
+    </div>
+
+    <div class="container cs-case-split-outer w-container">
+      <div class="cs-case-split">
+        <nav class="cs-case-toc" aria-label="Case study sections">
+          <a href="#summary" class="cs-side-nav w-inline-block"><div>Overview</div></a>
+          <a href="#problem" class="cs-side-nav w-inline-block"><div>Problem space</div></a>
+          <a href="#people" class="cs-side-nav w-inline-block"><div>People</div></a>
+          <a href="#research" class="cs-side-nav w-inline-block"><div>Research</div></a>
+          <a href="#decisions" class="cs-side-nav w-inline-block"><div>Decisions</div></a>
+          <a href="#final-design" class="cs-side-nav w-inline-block"><div>Final designs</div></a>
+          <a href="#results" class="cs-side-nav w-inline-block"><div>Results</div></a>
+          <a href="#why" class="cs-side-nav w-inline-block"><div>Why it worked</div></a>
+          <a href="#learnings" class="cs-side-nav w-inline-block"><div>Learnings</div></a>
+        </nav>
+
+        <div class="cs-case-main">
+
+          <!-- 1. Header metrics + snapshot -->
+          <div id="summary" class="cs-summary-section">
+            <div class="mw-860">
+              <div class="cs-impact-row-col-3">
+                <div class="cs-impact-item">
+                  <div class="cs-impact-number">82%</div>
+                  <div class="cs-impact-title">Completion rate</div>
+                  <div class="cs-impact-sub">Up from 45% pre-redesign</div>
+                </div>
+                <div class="cs-impact-item">
+                  <div class="cs-impact-number">20%</div>
+                  <div class="cs-impact-title">Drop-off reduction</div>
+                  <div class="cs-impact-sub">Post credit-check abandonment</div>
+                </div>
+                <div class="cs-impact-item">
+                  <div class="cs-impact-number">40%</div>
+                  <div class="cs-impact-title">Under 2 minutes</div>
+                  <div class="cs-impact-sub">Users completing sign-up</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. The problem space -->
+          <div id="problem" class="cs-offset-section">
+            <div class="mw-860">
+              <div class="heading-3">The problem space</div>
+              <p class="cs-body">I looked at the existing onboarding and found a clear pattern: over half of people who started never finished. The leaks weren't scattered — they clustered at three steps.</p>
+
+              <div class="slice-flow-panel">
+                <p class="slice-flow-label">Old onboarding flow — drop-off points</p>
+                <div class="slice-flow-row">
+                  <div class="slice-flow-step">Phone number</div>
+                  <span class="slice-flow-arrow">→</span>
+                  <div class="slice-flow-step">OTP</div>
+                  <span class="slice-flow-arrow">→</span>
+                  <div class="slice-flow-step">Name</div>
+                  <span class="slice-flow-arrow">→</span>
+                  <div class="slice-flow-step">User type</div>
+                  <span class="slice-flow-arrow">→</span>
+                  <div class="slice-flow-step is-drop">PAN image upload</div>
+                </div>
+                <div class="slice-flow-row">
+                  <div class="slice-flow-step">Company name</div>
+                  <span class="slice-flow-arrow">→</span>
+                  <div class="slice-flow-step">Company city</div>
+                  <span class="slice-flow-arrow">→</span>
+                  <div class="slice-flow-step">Salary range</div>
+                  <span class="slice-flow-arrow">→</span>
+                  <div class="slice-flow-step">PF deducted</div>
+                </div>
+                <div class="slice-flow-row">
+                  <div class="slice-flow-step is-drop">Address upload</div>
+                  <span class="slice-flow-arrow">→</span>
+                  <div class="slice-flow-step">Selfie</div>
+                  <span class="slice-flow-arrow">→</span>
+                  <div class="slice-flow-step is-drop">Wait 24–48 hrs</div>
+                </div>
+              </div>
+
+              <div class="slice-problem-opp">
+                <div class="slice-problem-box">
+                  <div class="slice-box-tag slice-box-tag-red">The problem</div>
+                  <h4>Over half dropping off</h4>
+                  <p>Three steps accounted for majority of abandonment: PAN image upload, address upload, 24–48hr wait.</p>
+                </div>
+                <div class="slice-opp-box">
+                  <div class="slice-box-tag slice-box-tag-green">The opportunity</div>
+                  <h4>Automate the hard parts</h4>
+                  <p>Replace manual document uploads with automated data fetches, show credit limit at end to remove uncertainty of waiting.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. The people we designed for -->
+          <div id="people" class="cs-offset-section">
+            <div class="mw-860">
+              <div class="heading-3">The people we designed for</div>
+              <p class="cs-body">I grounded the redesign in two user types we kept seeing in interviews — first-timers who needed reassurance, and experienced users who refused to re-enter data Slice already had.</p>
+
+              <div class="slice-persona-grid">
+                <div class="slice-persona-card">
+                  <div class="slice-persona-meta">First-time credit card user</div>
+                  <h4 class="slice-persona-name">Malini, 28</h4>
+                  <p class="slice-persona-role">Works in IT, shops online, uses finance apps</p>
+                  <ul class="slice-persona-list">
+                    <li>Wants quick approval and clear next steps</li>
+                    <li>Gets anxious when asked for documents without knowing if she qualifies</li>
+                  </ul>
+                  <p class="slice-persona-quote">“If I'm approved, tell me now — then I'll finish the rest.”</p>
+                </div>
+                <div class="slice-persona-card">
+                  <div class="slice-persona-meta">Experienced credit card user</div>
+                  <h4 class="slice-persona-name">Rajesh, 33</h4>
+                  <p class="slice-persona-role">Manager in a Tier-2 city, already owns a card</p>
+                  <ul class="slice-persona-list">
+                    <li>Wants a fast process and clear benefits</li>
+                    <li>Gets frustrated when asked for info already linked to PAN</li>
+                  </ul>
+                  <p class="slice-persona-quote">“Don't make me enter what you already have from my PAN.”</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Research insights -->
+          <div id="research" class="cs-offset-section">
+            <div class="mw-860">
+              <div class="heading-3">Research insights</div>
+              <p class="cs-body">I combined funnel analytics, user interviews, and competitor review. Three insights shaped every decision that followed.</p>
+
+              <div class="slice-insight">
+                <div class="slice-insight-num">01</div>
+                <div>
+                  <h4 class="slice-insight-title">Funnel identified three critical leaks</h4>
+                  <p class="slice-insight-detail">Analytics confirmed biggest exits at PAN image upload, proof of address upload, and 24–48hr activation wait. These became the primary targets.</p>
+                </div>
+              </div>
+              <div class="slice-insight">
+                <div class="slice-insight-num">02</div>
+                <div>
+                  <h4 class="slice-insight-title">Users resisted giving documents before knowing if they'd be approved</h4>
+                  <p class="slice-insight-detail">Every interview participant said being asked for documents before any approval signal felt unfair. Validated showing credit score early as a motivation anchor.</p>
+                </div>
+              </div>
+              <div class="slice-insight">
+                <div class="slice-insight-num">03</div>
+                <div>
+                  <h4 class="slice-insight-title">Competitors had already found a compliant path</h4>
+                  <p class="slice-insight-detail">CRED and Paytm both deferred some KYC steps until after provisional approval. I used this as evidence to bring to the legal team.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Key design decisions -->
+          <div id="decisions" class="cs-offset-section">
+            <div class="mw-860">
+              <div class="heading-3">Key design decisions</div>
+              <p class="cs-body">I explored four directions. Three I rejected. One I took to legal and shipped.</p>
+
+              <div class="slice-decisions">
+                <div class="slice-decision-card">
+                  <div class="slice-decision-head">
+                    <h4 class="slice-decision-title">Full KYC upfront</h4>
+                    <span class="slice-decision-badge reject">Rejected</span>
+                  </div>
+                  <div class="slice-decision-body">
+                    <div class="slice-decision-col">
+                      <div class="slice-decision-col-label">Pros</div>
+                      <p>Compliance-safe, no post-approval work</p>
+                    </div>
+                    <div class="slice-decision-col">
+                      <div class="slice-decision-col-label">Cons</div>
+                      <p>High drop-offs at doc uploads, long time to value</p>
+                    </div>
+                    <div class="slice-decision-col">
+                      <div class="slice-decision-col-label">Why rejected</div>
+                      <p>Doesn't solve the problem, maintains status quo</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="slice-decision-card">
+                  <div class="slice-decision-head">
+                    <h4 class="slice-decision-title">Shortened upfront form</h4>
+                    <span class="slice-decision-badge reject">Rejected</span>
+                  </div>
+                  <div class="slice-decision-body">
+                    <div class="slice-decision-col">
+                      <div class="slice-decision-col-label">Pros</div>
+                      <p>Easier start, no backend change</p>
+                    </div>
+                    <div class="slice-decision-col">
+                      <div class="slice-decision-col-label">Cons</div>
+                      <p>Still front-loads address proof, core friction remains</p>
+                    </div>
+                    <div class="slice-decision-col">
+                      <div class="slice-decision-col-label">Why rejected</div>
+                      <p>Addresses symptoms not root cause</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="slice-decision-card">
+                  <div class="slice-decision-head">
+                    <h4 class="slice-decision-title">Parallel credit check + KYC</h4>
+                    <span class="slice-decision-badge reject">Rejected</span>
+                  </div>
+                  <div class="slice-decision-body">
+                    <div class="slice-decision-col">
+                      <div class="slice-decision-col-label">Pros</div>
+                      <p>Faster total time</p>
+                    </div>
+                    <div class="slice-decision-col">
+                      <div class="slice-decision-col-label">Cons</div>
+                      <p>Tech/API complexity; if either fails, user leaves with nothing</p>
+                    </div>
+                    <div class="slice-decision-col">
+                      <div class="slice-decision-col-label">Why rejected</div>
+                      <p>Failure mode is worse than current state</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="slice-decision-card">
+                  <div class="slice-decision-head">
+                    <h4 class="slice-decision-title">Approval-first with automated KYC steps</h4>
+                    <span class="slice-decision-badge accept">Accepted</span>
+                  </div>
+                  <div class="slice-decision-body">
+                    <div class="slice-decision-col">
+                      <div class="slice-decision-col-label">Pros</div>
+                      <p>Early win for user, less early friction, RBI-compliant before card issue</p>
+                    </div>
+                    <div class="slice-decision-col">
+                      <div class="slice-decision-col-label">Cons</div>
+                      <p>Needs backend sequencing and compliance sign-off</p>
+                    </div>
+                    <div class="slice-decision-col">
+                      <div class="slice-decision-col-label">Why accepted</div>
+                      <p>Removes the three highest drop-off steps while staying fully compliant</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Final designs -->
+          <div id="final-design" class="cs-offset-section">
+            <div class="mw-860">
+              <div class="heading-3">Final designs</div>
+              <p class="cs-body">I redesigned the sequence around motivation: show eligibility early, automate the document steps, and end with something usable — not a wait screen.</p>
+
+              <div class="slice-proto-video-wrap">
+                <video id="prototype-placeholder" class="slice-proto-video" autoplay loop muted playsinline>
+                  <source src="/videos/slice-proto.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Results & impact -->
+          <div id="results" class="cs-offset-section">
+            <div class="mw-860">
+              <div class="heading-3">Results &amp; impact</div>
+              <p class="cs-body">The redesign moved the completion rate from 45% to 82%. Document-step drop-off fell 20%. Forty percent of users finished sign-up in under two minutes.</p>
+
+              <div class="slice-results-table">
+                <div class="slice-results-row is-head">
+                  <div>Metric</div>
+                  <div>Baseline / goal</div>
+                  <div>Result</div>
+                  <div>Status</div>
+                </div>
+                <div class="slice-results-row">
+                  <div>Onboarding completion rate</div>
+                  <div>↑ from 45%</div>
+                  <div><strong>82%</strong></div>
+                  <div><span class="slice-results-status">Achieved</span></div>
+                </div>
+                <div class="slice-results-row">
+                  <div>Drop-off at document steps</div>
+                  <div>−20%</div>
+                  <div><strong>−20%</strong></div>
+                  <div><span class="slice-results-status">Achieved</span></div>
+                </div>
+                <div class="slice-results-row">
+                  <div>Users completing in under 2 min</div>
+                  <div>Reduce perceived wait</div>
+                  <div><strong>40%</strong></div>
+                  <div><span class="slice-results-status">Achieved</span></div>
+                </div>
+              </div>
+
+              <!-- Hidden for now
+              <div class="cs-impact-row-col-3">
+                <div class="cs-impact-item">
+                  <div class="cs-impact-number">82%</div>
+                  <div class="cs-impact-title">Completion rate</div>
+                  <div class="cs-impact-sub">Up from 45% pre-redesign</div>
+                </div>
+                <div class="cs-impact-item">
+                  <div class="cs-impact-number">20%</div>
+                  <div class="cs-impact-title">Drop-off reduction</div>
+                  <div class="cs-impact-sub">Post credit-check abandonment</div>
+                </div>
+                <div class="cs-impact-item">
+                  <div class="cs-impact-number">40%</div>
+                  <div class="cs-impact-title">Under 2 minutes</div>
+                  <div class="cs-impact-sub">Users completing sign-up</div>
+                </div>
+              </div>
+              -->
+            </div>
+          </div>
+
+          <!-- 8. Why it worked -->
+          <div id="why" class="cs-offset-section">
+            <div class="mw-860">
+              <div class="heading-3">Why it worked</div>
+              <ul class="slice-why-list">
+                <li>Users saw value — credit score and approved limit — before doing the most tedious parts</li>
+                <li>The three highest drop-off steps were automated or eliminated, not just redesigned</li>
+                <li>RBI compliance stayed fully intact — full KYC completed before card issue, just in a better sequence</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 9. Key learnings -->
+          <div id="learnings" class="cs-offset-section">
+            <div class="mw-860">
+              <div class="heading-3">Key learnings</div>
+              <p class="cs-body">What I'd carry forward</p>
+
+              <div>
+                <div class="cs-numbered-item">
+                  <div class="cs-num">01</div>
+                  <div class="cs-numbered-content">
+                    <div class="cs-numbered-title">Compliance can be an enabler if you involve the legal team early — they helped find the compliant path, not block it</div>
+                  </div>
+                </div>
+                <div class="cs-numbered-item">
+                  <div class="cs-num">02</div>
+                  <div class="cs-numbered-content">
+                    <div class="cs-numbered-title">In regulated flows, when you ask for data matters as much as what you ask for</div>
+                  </div>
+                </div>
+                <div class="cs-numbered-item">
+                  <div class="cs-num">03</div>
+                  <div class="cs-numbered-content">
+                    <div class="cs-numbered-title">Removing or deferring high-friction steps has a much bigger payoff than polishing the steps themselves</div>
+                  </div>
+                </div>
+                <div class="cs-numbered-item">
+                  <div class="cs-num">04</div>
+                  <div class="cs-numbered-content">
+                    <div class="cs-numbered-title">Showing progress and early wins — like the credit score reveal — keeps users motivated to complete the rest</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="heading-left">
+        <div class="other-section-heading">Other key projects</div>
+      </div>
+      <div class="w-layout-grid grid-services">
+        <a href="new-car.html" class="card-expertise-light design w-inline-block">
+          <div class="service-text-wrapper">
+            <h3 class="heading-m">New car insurance built around intent — 3× funnel improvement</h3>
+            <div class="work-textlink-copy">
+              <div class="text-link">Read case study</div>
+              <img src="/images/icons/arrow-right-circle.svg" loading="lazy" alt="Arrow right" />
+            </div>
+          </div>
+          <img src="/images/Projects/New-car-other.webp" loading="lazy"
+            sizes="(max-width: 479px) 65vw, (max-width: 767px) 58vw, (max-width: 991px) 67vw, 54vw"
+            alt="New car insurance case study preview" class="work-featureimage design" />
+        </a>
+        <a href="rsa.html" class="card-expertise-light webflow w-inline-block">
+          <div class="service-text-wrapper">
+            <h3 class="heading-m">Transformed Acko RSA from calls to 2,188 digital cases at launch</h3>
+            <div class="work-textlink-copy">
+              <div class="text-link">Read case study</div>
+              <img src="/images/icons/arrow-right-circle.svg" loading="lazy" alt="Arrow right" />
+            </div>
+          </div>
+          <img src="/images/Projects/RSA-other.webp" loading="lazy"
+            sizes="(max-width: 479px) 65vw, (max-width: 767px) 58vw, (max-width: 991px) 67vw, 54vw"
+            alt="ACKO RSA case study preview" class="work-featureimage design" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="section-heading">
+          <a href="/" aria-current="page" class="footer-brand w-inline-block w--current">
+            <img src="/images/icons/bharath-logo.png" loading="lazy" width="180" alt="Archana Kumari" />
+          </a>
+          <div class="heading-s">archanakumaribarik@gmail.com</div>
+          <div class="heading-s">+919658544412</div>
+        </div>
+        <div class="footer-content footer-content--nav">
+          <nav id="w-node-_65ba4e28-b974-09aa-c4f7-ae432dfa3be1-72a3612f" class="footer-block footer-block--nav"
+            aria-label="Footer">
+            <a href="/" class="footer-link">Home</a>
+            <a href="/about.html" class="footer-link">About</a>
+            <a href="/Works/design.html" class="footer-link">Work</a>
+            <a href="/contact.html" class="footer-link">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="footer-row">
+        <div class="footer-2-left">
+          <div>© 2026 Archana Kumari</div>
+        </div>
+        <div class="footer-2-right">
+          <ul role="list" class="social-icons-list w-list-unstyled">
+            <li class="list-item">
+              <a href="https://www.linkedin.com/in/archana-3a4a13105/" target="_blank"
+                class="footersocialicons w-inline-block">
+                <img src="/images/social/linkedin.svg" alt="LinkedIn" class="social-icon" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=60c5f64abe141da7260da0b9"
+    type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.prod.website-files.com/60c5f64abe141da7260da0b9/js/webflow.schunk.680376d705a1bdad.js"
+    type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/60c5f64abe141da7260da0b9/js/webflow.schunk.07e5ff034b932010.js"
+    type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/60c5f64abe141da7260da0b9/js/webflow.schunk.1723eb51af64791b.js"
+    type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/60c5f64abe141da7260da0b9/js/webflow.schunk.afb63642222729d6.js"
+    type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/60c5f64abe141da7260da0b9/js/webflow.f1dee9a7.91ca6045c0672c0c.js"
+    type="text/javascript"></script>
+  <script src="/js/cs-side-nav-scroll.js" type="text/javascript"></script>
+  <script src="/js/nav-scroll-hide.js" type="text/javascript"></script>
+</body>
+
+</html>
