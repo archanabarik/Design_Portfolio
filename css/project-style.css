@@ -3235,6 +3235,10 @@ img.ch-biz__figure {
 
 .grid-services .card-expertise-light .work-featureimage {
   z-index: 1;
+  /* Source images have differing aspect ratios; pin one so every card matches. */
+  aspect-ratio: 219 / 329;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* ============================================================
