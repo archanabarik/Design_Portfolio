@@ -1471,8 +1471,29 @@
   pointer-events: none;
 }
 
-.cs-design-thumb--gallery:hover .cs-design-thumb-hint {
-  opacity: 1;
+/* Affordance sits on the hovered thumbnail, not the whole gallery. */
+@media (hover: hover) {
+  .cs-design-thumb-trigger::after {
+    content: "Click to expand";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(20, 20, 20, 0.45);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  }
+
+  .cs-design-thumb-trigger:hover::after,
+  .cs-design-thumb-trigger:focus-visible::after {
+    opacity: 1;
+  }
 }
 
 /* Design timeline lightbox */

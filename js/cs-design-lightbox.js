@@ -9,6 +9,12 @@
   var lightbox = document.getElementById('cs-design-lightbox');
   if (!galleries.length || !lightbox) return;
 
+  // .container sets position/z-index, which traps the lightbox in a stacking
+  // context that paints beneath the fixed navbar. Reparent to escape it.
+  if (lightbox.parentNode !== document.body) {
+    document.body.appendChild(lightbox);
+  }
+
   var imageEl = lightbox.querySelector('.cs-design-lightbox-image');
   var prevBtn = lightbox.querySelector('[data-lightbox-prev]');
   var nextBtn = lightbox.querySelector('[data-lightbox-next]');
