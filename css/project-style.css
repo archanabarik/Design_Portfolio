@@ -3386,3 +3386,11 @@ img.ch-biz__figure {
     background-image: linear-gradient(90deg, #180535 0%, #3c145f 47%, #5a2184 100%);
   }
 }
+
+/* Disabled text links (e.g. resume until new PDF is ready) */
+.text-link-block.is-disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.55;
+  text-decoration: none;
+}
