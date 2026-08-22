@@ -5,16 +5,16 @@
   <meta charset="utf-8" />
   <title>ACKO New Car Insurance | Case Study | Archana Kumari</title>
   <meta
-    content="Led the design rebuild of Acko's new car insurance journey — E2Q from 21% to 65% across three releases, with production rollout surfacing what to cut before scale."
+    content="Led the design rebuild of ACKO's new car insurance journey. Entry to quote from 21% to 65% across three releases, with production rollout surfacing what to cut before scale."
     name="description" />
   <meta content="ACKO New Car Insurance | Case Study | Archana Kumari" property="og:title" />
   <meta
-    content="Led the design rebuild of Acko's new car insurance journey — E2Q from 21% to 65% across three releases, with production rollout surfacing what to cut before scale."
+    content="Led the design rebuild of ACKO's new car insurance journey. Entry to quote from 21% to 65% across three releases, with production rollout surfacing what to cut before scale."
     property="og:description" />
   <meta content="" property="og:image" />
   <meta content="ACKO New Car Insurance | Case Study | Archana Kumari" property="twitter:title" />
   <meta
-    content="Led the design rebuild of Acko's new car insurance journey — E2Q from 21% to 65% across three releases, with production rollout surfacing what to cut before scale."
+    content="Led the design rebuild of ACKO's new car insurance journey. Entry to quote from 21% to 65% across three releases, with production rollout surfacing what to cut before scale."
     property="twitter:description" />
   <meta content="" property="twitter:image" />
   <meta property="og:type" content="website" />
@@ -62,6 +62,24 @@
         -ms-transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
         transform: translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
       }
+    }
+
+    /* Keep What shipped and later sections on the same 860px content width as the rest of the page */
+    @media (min-width: 769px) {
+      #final-design .mw-860:has(.newcar-gallery) {
+        width: min(100%, 860px);
+      }
+    }
+
+    .cs-full-img-block .cs-image-placeholder {
+      margin: 0;
+    }
+
+    .newcar-gallery .cs-image-placeholder {
+      margin: 0;
+      min-height: 320px;
+      width: 100%;
+      box-sizing: border-box;
     }
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -122,8 +140,8 @@
   </div>
   <div class="section pt-120 pb-0 section-overflow-visible">
     <div class="w-container">
-      <h1 class="cs-title">Transformed Acko's new car insurance — from a 21% funnel to 65%</h1>
-      <p class="cs-body">A 3× lift in entry-to-quote, achieved across three releases — and one screen killed at 1% before it could scale.</p>
+      <h1 class="cs-title">Transformed ACKO's new car insurance from a 21% funnel to 65%</h1>
+      <p class="cs-body">Grew the number of users who complete a quote by <strong>three times</strong>. One screen got cut before it could scale to everyone.</p>
     </div>
     <div class="container"><img src="/images/Projects/new-car/NewCar_Hero.jpg" loading="lazy"
         sizes="(max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"
@@ -135,9 +153,6 @@
         <nav class="cs-case-toc" aria-label="Case study sections">
           <a href="#summary" class="cs-side-nav w-inline-block">
             <div>Summary</div>
-          </a>
-          <a href="#context" class="cs-side-nav w-inline-block">
-            <div>Context</div>
           </a>
           <a href="#insight" class="cs-side-nav w-inline-block">
             <div>Core insight</div>
@@ -166,19 +181,20 @@
           <div id="summary" class="cs-summary-section">
             <div class="mw-860">
               <div class="heading-3">Summary</div>
-              <p class="cs-body">I led the design rebuild of Acko's new car insurance journey. The product was converting 21% of users to a quote and losing the rest — half the pipeline was researchers with delivery dates weeks away, and the other half was being actively pushed back by dealers at the showroom. The product had no answer to either.</p>
-              <p class="cs-body">I rebuilt the journey around a clear position against dealer misinformation, a structural fork based on purchase intent, and a graduated rollout that used 1% traffic as a live design experiment. Three releases over three months. E2Q stabilised at 65% — a 3× improvement on the baseline.</p>
+              <p class="cs-body">Only <strong>21</strong> out of every <strong>100</strong> people who started ACKO's new car insurance flow finished getting a quote. <strong>I needed to know why the other 79 left.</strong></p>
+              <p class="cs-body">Half of them were still researching. Their car wasn't arriving for weeks, so there was no rush to buy insurance yet. The other half had already been talked out of it by a dealer. One buyer mentioned ACKO to his dealer while picking up his car. The dealer dropped the price from <strong>one lakh rupees to thirty five thousand</strong> on the spot, not because ACKO was too expensive, just to keep the sale.</p>
+              <p class="cs-body">I rebuilt the journey around three calls. Speak up directly against what dealers were telling buyers, instead of staying neutral. Split the experience based on how close someone was to actually buying. Test every change on real users before rolling it out to everyone. Three releases over three months took <strong>entry to quote</strong> from <strong>21% to 65%</strong>.</p>
 
                 <div class="cs-impact-row">
                   <div class="cs-impact-item">
                     <div class="cs-impact-number">65%</div>
-                    <div class="cs-impact-title">E2Q at full rollout</div>
+                    <div class="cs-impact-title">Entry to quote at full rollout</div>
                     <div class="cs-impact-sub">Up from 21% baseline</div>
                   </div>
                   <div class="cs-impact-item">
                     <div class="cs-impact-number">3×</div>
                     <div class="cs-impact-title">Funnel improvement</div>
-                    <div class="cs-impact-sub">Feb → May 2026</div>
+                    <div class="cs-impact-sub">Feb to May 2026</div>
                   </div>
                   <div class="cs-impact-item">
                     <div class="cs-impact-number">1</div>
@@ -187,61 +203,54 @@
                   </div>
                   <div class="cs-impact-item">
                     <div class="cs-impact-number">~5%</div>
-                    <div class="cs-impact-title">Q2S — held stable</div>
-                    <div class="cs-impact-sub">Intent-driven, expected</div>
+                    <div class="cs-impact-title">Quote to sale held stable</div>
+                    <div class="cs-impact-sub">Intent driven, expected</div>
                   </div>
                 </div>
-              <div class="cs-highlight">The most important design decision on this project happened in production. The 1% rollout caught what no prototype could — and cutting that one screen was worth more than any other change.</div>
-            </div>
-          </div>
-
-          <div id="context" class="cs-offset-section">
-            <div class="mw-860">
-              <div class="heading-3">Context</div>
-              <div class="cs-h3">Why this project mattered</div>
-              <p class="cs-body">New car buyers are one of motor insurance's most valuable segments — clean history, brand-new vehicle, high renewal rate. Acko's pricing was genuinely better than dealer offers. None of that advantage was converting into policies.</p>
-              <p class="cs-body">Between booking a car and collecting it — typically two to six weeks — dealers have daily touchpoints with the buyer. Acko had zero. Dealers had financial incentive to push their own insurance partners, and they used every touchpoint to do it. When one internal user mentioned Acko while collecting his car, the dealer dropped his quote from ₹1 lakh to ₹35,000 on the spot. Not because Acko was overpriced — because the dealer was protecting their margin.</p>
-              <p class="cs-body">The product had no presence in any of those moments and no rebuttal once the user came back to it. Acko was losing a segment it should have owned.</p>
-              <div class="cs-highlight">The product wasn't losing on price or quality. It was losing because it wasn't in the room when the decision was being made — and had nothing to say when the user came back.</div>
+              <div class="cs-highlight">The most important design decision on this project happened in production. The <strong>1%</strong> rollout caught what no prototype could. <strong>Cutting that one screen was worth more than any other change.</strong></div>
             </div>
           </div>
 
           <div id="insight" class="cs-offset-section">
             <div class="mw-860">
               <div class="heading-3">A funnel problem was actually a position problem</div>
-              <p class="cs-body">PRD said E2Q was 44% overall, 66% with misclicks removed. That looked like a funnel problem — too many steps, too much friction. The signals underneath pointed somewhere different.</p>
+              <p class="cs-body">The early numbers looked like a funnel problem. Entry to quote sat at <strong>44%</strong> overall, <strong>66%</strong> once you removed accidental taps. <strong>But the real story was underneath those numbers.</strong></p>
               <div class="cs-two-col-text">
                 <div>
                   <div class="cs-col-label challenge">The brief assumed</div>
                   <div class="cs-col-title">A funnel problem</div>
-                  <div class="cs-col-desc">Reduce steps, simplify the MMV selector, tighten the flow. Treat the journey as a series of friction points to remove. Optimise for completion.</div>
+                  <div class="cs-col-desc">Reduce steps, simplify <strong>make, model, variant</strong> selection, tighten the flow. Treat the journey as a series of friction points to remove. Optimise for completion.</div>
                 </div>
                 <div>
                   <div class="cs-col-label opportunity">The data showed</div>
                   <div class="cs-col-title">A position problem</div>
-                  <div class="cs-col-desc">Half the users had no urgency — delivery weeks away, no reason to commit. The other half were being talked out of it before they opened the app. The journey had no answer to either.</div>
+                  <div class="cs-col-desc">Half the users had no urgency. Delivery weeks away, no reason to commit. The other half were being talked out of it before they opened the app. <strong>The journey had no answer to either.</strong></div>
                 </div>
               </div>
-              <p class="cs-body"><strong>Two signals made this clear:</strong> Q2S: 11% same-day. 0.5% for "not sure". A 10× gap driven entirely by how close someone is to needing insurance. The funnel can't fix this. ~50% of quotes from far-delivery users — the biggest cohort, almost zero conversion. No early-buy hook meant no reason to commit before the showroom visit.</p>
-              <div class="cs-highlight">Build a journey that earns trust before the dealer gets there — and gives users who aren't ready a reason to come back.</div>
+              <p class="cs-body">Two signals made this clear. Same day buyers converted <strong>quote to sale</strong> <strong>11%</strong> of the time. Buyers who weren't sure yet converted quote to sale <strong>half a percent</strong> of the time. That gap is <strong>twenty times</strong> wide, and no amount of streamlining the steps closes it. Half of every quote came from people whose car was still weeks away. That's the biggest group of users, and almost none of them converted. <strong>Nothing in the journey gave them a reason to act early.</strong></p>
+
+              <div class="cs-full-img-block">
+                <div class="cs-image-placeholder" role="img" aria-label="Before and after flow diagram">Before and after flow diagram</div>
+                <div class="heading-5">One flow for everyone became three paths based on how close someone was to buying.</div>
+              </div>
             </div>
           </div>
 
           <div id="growth" class="cs-offset-section">
             <div class="mw-860">
               <div class="heading-3">Strategy</div>
-              <p class="cs-body">The product needed to do three things the old journey couldn't. Each became a structural decision — not a screen-level fix.</p>
+              <p class="cs-body">I needed the product to do three things the old journey couldn't. <strong>Each became a structural decision, not a screen level fix.</strong></p>
 
                 <div class="cs-growth-strategy-flow">
-                  <div class="cs-growth-strategy-flow__step"><strong>MOVE 01 — Position before design</strong><br />The product needed to stand for something specific. Confident, fact-led, activist — not defensive. Named dealer claims, real settlement data, specific not generic.</div>
+                  <div class="cs-growth-strategy-flow__step"><strong>MOVE 01. Decide what we stand for before designing</strong><p>The product needed to stand for something specific. Confident, fact led, activist, not defensive. Named dealer claims, real settlement data, specific not generic.</p></div>
                   <span class="cs-growth-strategy-flow__arrow" aria-hidden="true">↓</span>
-                  <div class="cs-growth-strategy-flow__step"><strong>MOVE 02 — Fork the journey at intent</strong><br />A user who hasn't booked yet needs a different product than someone picking up tomorrow. Booking status modal, three flows not one, intent-driven routing.</div>
+                  <div class="cs-growth-strategy-flow__step"><strong>MOVE 02. Split the journey by how close someone is to buying</strong><p>A user who hasn't booked yet needs a different product than someone picking up tomorrow. One booking status screen, three flows not one, routed by how close they are to buying.</p></div>
                   <span class="cs-growth-strategy-flow__arrow" aria-hidden="true">↓</span>
-                  <div class="cs-growth-strategy-flow__step"><strong>MOVE 03 — Production as design tool</strong><br />A prototype can't tell you 99% of users will ignore your landing page. 1% of real traffic can. Graduated rollout, hypothesis-driven release, cut what doesn't work.</div>
+                  <div class="cs-growth-strategy-flow__step"><strong>MOVE 03. Use real traffic as a design tool</strong><p>A prototype can't tell you <strong>99%</strong> of users will ignore your landing page. <strong>1%</strong> of real traffic can. Roll out in stages, test each release with a clear question, cut what doesn't work.</p></div>
                 </div>
 
               <div class="cs-h3">How the journey forks</div>
-              <p class="cs-body">User enters new car insurance journey → booking status (booked / finalised but not booked / still deciding) → three paths:</p>
+              <p class="cs-body">User enters the new car insurance journey, picks booking status (booked / finalised but not booked / still deciding), then follows one of three paths:</p>
 
               <div class="acko-habit-loop-wrap">
                 <table class="acko-habit-loop-table">
@@ -254,88 +263,72 @@
                   <tbody>
                     <tr>
                       <td><strong>Booked</strong></td>
-                      <td class="acko-habit-loop-reward-cell">Direct to MMV + plans — get out of the way. Route them to purchase.</td>
+                      <td class="acko-habit-loop-reward-cell">Straight to make, model, variant, then plans. Get out of the way and route them to buy.</td>
                     </tr>
                     <tr>
                       <td><strong>Finalised</strong></td>
-                      <td class="acko-habit-loop-reward-cell">Lock-in incentive first — give them a reason to commit before the dealer visit.</td>
+                      <td class="acko-habit-loop-reward-cell">Lock in incentive first. Give them a reason to commit before the dealer visit.</td>
                     </tr>
                     <tr>
                       <td><strong>Deciding</strong></td>
-                      <td class="acko-habit-loop-reward-cell">Education + comparison — build intent. No pressure to buy.</td>
+                      <td class="acko-habit-loop-reward-cell">Education and comparison. Build intent. No pressure to buy.</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <p class="cs-body">The fork wasn't a feature. It was the structural argument that one product can't serve two users with completely different needs — and the booking status modal became the spine of the new journey.</p>
+              <p class="cs-body"><strong>One screen, asking where someone was in the buying process, became the spine of the new journey.</strong> Every screen after it was built around what the user told us there.</p>
             </div>
           </div>
 
           <div id="ia" class="cs-offset-section">
             <div class="mw-860">
               <div class="heading-3">The hard calls</div>
-              <p class="cs-body">Three decisions that shaped the journey. Each pushback changed something structural. The first set up the tone, the second set up the architecture, the third caught what would have scaled badly.</p>
+              <p class="cs-body"><strong>Three decisions that shaped the journey.</strong> Each pushback changed something structural. The first set up the tone, the second set up the architecture, the third caught what would have scaled badly.</p>
               <div class="acko-ia-grid">
                 <div class="acko-ia-card">
                   <div class="kfd-pill">
                     01
                   </div>
-                  <p class="acko-ia-card__quote">Pushed for activist copy, not defensive</p>
-                  <p class="acko-ia-card__body">Early drafts answered dealer claims politely — useless to a user being told the opposite by someone in front of them. Pushed for confident, fact-led, specific. Named garages near the user, real settlement numbers, direct rebuttals to specific claims. Approved through leadership review.</p>
+                  <p class="acko-ia-card__quote">Answered dealers head on, not politely</p>
+                  <p class="acko-ia-card__body"><strong>The call.</strong> Early drafts stayed neutral. That doesn't work on someone standing in a showroom being told the opposite. I named real garages, showed real settlement numbers, answered dealer claims directly.</p>
                   <div class="acko-ia-card__divider" aria-hidden="true"></div>
                   <div class="acko-ia-card__pills">
-                    <span class="acko-ia-chip">Activist tone shipped</span>
-                    <span class="acko-ia-chip">Template for dealer pressure</span>
+                    <span class="acko-ia-chip">This became how the app talks about pricing everywhere a dealer might contradict it.</span>
                   </div>
                 </div>
                 <div class="acko-ia-card">
                   <div class="kfd-pill">
                     02
                   </div>
-                  <p class="acko-ia-card__quote">Forked the journey at booking status</p>
-                  <p class="acko-ia-card__body">A user who hasn't booked yet doesn't know their dealer or delivery date. A user picking up tomorrow does. Asking both groups the same questions created friction for the ready buyer and irrelevance for the researcher. The booking status modal became the structural spine — every screen downstream changed because of it.</p>
+                  <p class="acko-ia-card__quote">Split the flow by how close someone was to buying</p>
+                  <p class="acko-ia-card__body"><strong>The call.</strong> A user who hasn't booked yet doesn't know their dealer or delivery date. A user picking up tomorrow does. One question upfront, where are you in the process, split the flow in two.</p>
                   <div class="acko-ia-card__divider" aria-hidden="true"></div>
                   <div class="acko-ia-card__pills">
-                    <span class="acko-ia-chip">Core architecture</span>
-                    <span class="acko-ia-chip">Every screen downstream redesigned</span>
+                    <span class="acko-ia-chip">That question became the spine of the journey. Every screen after it was built around the answer.</span>
                   </div>
                 </div>
                 <div class="acko-ia-card">
                   <div class="kfd-pill">
                     03
                   </div>
-                  <p class="acko-ia-card__quote">Killed the landing page at 1%</p>
-                  <p class="acko-ia-card__body">Built an activist landing page to address dealer myths. At 1% rollout, scroll data showed 99% of users ignored it — they hit the CTA at the top, the content below was invisible. Carrying it into a 50% rollout would have added friction for everyone and helped no one. Cut it.</p>
+                  <p class="acko-ia-card__quote">Cut the landing page at 1%</p>
+                  <p class="acko-ia-card__body"><strong>The call.</strong> Built a page to counter dealer myths before the flow even started. At <strong>1%</strong> of traffic, <strong>99%</strong> of users skipped straight past it. I cut it rather than carry it to everyone.</p>
                   <div class="acko-ia-card__divider" aria-hidden="true"></div>
                   <div class="acko-ia-card__pills">
-                    <span class="acko-ia-chip">E2Q 13% → 34% after cut</span>
-                    <span class="acko-ia-chip">Signal over vanity</span>
+                    <span class="acko-ia-chip">Entry to quote jumped from <strong>13% to 34%</strong> right after.</span>
                   </div>
                 </div>
               </div>
-              <p class="cs-body">E2Q went from 13% at 1% to 34% at 50% after removing the landing page. The most useful signal from the 1% phase wasn't what worked — it was what didn't, fast enough to fix.</p>
-              <div class="cs-highlight">The booking status fork is now the core architecture of the new car journey. Every screen downstream was redesigned around what the user told us about where they were.</div>
+              <div class="cs-highlight"><strong>The booking status fork is now the core architecture of the new car journey.</strong> Every screen after it was redesigned around what the user told us about where they were.</div>
             </div>
           </div>
 
           <div id="design-language" class="cs-offset-section">
             <div class="mw-860">
-              <div class="heading-3">Dealer rebuttals in the journey</div>
-              <p class="cs-body">Dealer rebuttals were integrated into the plans page itself, not a separate screen — specific named garages, real settlement data, direct answers to the claims dealers were making at the showroom.</p>
-              <div class="hp-problem-card">
-                <div class="hp-problem-card-header">Named dealer claims</div>
-                <p class="cs-body" style="margin-bottom:0">Address what buyers actually hear in the room — not generic reassurance.</p>
-              </div>
-              <div class="hp-problem-card">
-                <div class="hp-problem-card-header">Real settlement data</div>
-                <p class="cs-body" style="margin-bottom:0">Fact-led proof users can hold up against misinformation at the dealership.</p>
-              </div>
-              <div class="hp-problem-card">
-                <div class="hp-problem-card-header">Specific, not generic</div>
-                <p class="cs-body" style="margin-bottom:0">Named garages near the user, numbers that land, direct rebuttals to specific claims.</p>
-              </div>
-              <div class="cs-dark-block purple">
-                <div class="cs-final-quote">The flow shifted from a single funnel for everyone to three forked paths based on intent — each one designed for what the user actually needed at that moment.</div>
+              <div class="heading-3">Dealer rebuttals</div>
+              <div class="cs-full-img-block">
+                <div class="cs-image-placeholder" role="img" aria-label="Dealer rebuttal screen, image to be added">Dealer rebuttal screen, image to be added</div>
+                <div class="heading-5"><strong>Dealer rebuttals live on the plans page itself.</strong> Named garages, real settlement numbers, no extra screen needed.</div>
               </div>
             </div>
           </div>
@@ -344,40 +337,28 @@
           <div id="final-design" class="cs-offset-section">
             <div class="mw-860">
               <div class="heading-3">What shipped</div>
-              <p class="cs-body">Key surfaces from the new car insurance journey: booking status entry, forked flows, plans page, dealer selection pre-payment, and checkout.</p>
-              <!-- Hidden for now
-              <div class="cs-full-img-block">
-                <img src="/images/Projects/new-car/new-car-home.webp" loading="lazy" width="947.5"
-                  alt="New car insurance journey" class="sd-casestudy-img mob-border-none" />
-                <div class="heading-5">Booking status entry and routing into forked paths — booked, finalised, or still deciding.</div>
-              </div>
-              <div class="cs-full-img-block">
-                <img src="/images/Projects/new-car/new-car-coverage.webp" loading="lazy" width="947.5"
-                  alt="Plans and coverage" class="sd-casestudy-img mob-border-none" />
-                <div class="heading-5">Plans page with activist rebuttal layer — specific data alongside purchase decisions.</div>
-              </div>
-              -->
+              <p class="cs-body">Key screens from the new car insurance journey: booking status entry, forked flows, plans page, dealer selection before payment, and checkout.</p>
               <div class="gallery-grid rsa-gallery newcar-gallery">
                 <div class="rsa-gallery-col rsa-gallery-col--left">
                   <div class="case-study-gallery-item rsa-gallery-item rsa-gallery-item--1"><img
                       src="/images/Projects/new-car/New-car-price.webp"
-                      loading="lazy" alt="application screenshot" class="case-study-gallery-image">
-                    <div class="heading-5">MMV selection and plan comparison within the forked new-car flow.</div>
+                      loading="lazy" alt="Make, model, variant and price comparison screen" class="case-study-gallery-image">
+                    <div class="heading-5">Make, model, variant selection: plan comparison for people ready to buy.</div>
                   </div>
                   <div class="case-study-gallery-item rsa-gallery-item rsa-gallery-item--2"><img
                       src="/images/Projects/new-car/New-car-variant.webp"
-                      loading="lazy" alt="application screenshot" class="case-study-gallery-image">
-                    <div class="heading-5">Education and comparison patterns for users still deciding on the vehicle.</div>
+                      loading="lazy" alt="Vehicle variant selection screen" class="case-study-gallery-image">
+                    <div class="heading-5">Variant selection: vehicle options for people still deciding.</div>
                   </div>
                   <div class="case-study-gallery-item rsa-gallery-item rsa-gallery-item--4"><img
                       src="/images/Projects/new-car/New-car-addon.jpg"
-                      loading="lazy" alt="application screenshot" class="case-study-gallery-image">
-                    <div class="heading-5">Plan naming, add-ons, and comparison — tuned after 1% rollout signal.</div>
+                      loading="lazy" alt="Add on selection screen" class="case-study-gallery-image">
+                    <div class="heading-5">Add ons: optional covers and plan extras.</div>
                   </div>
                   <div class="case-study-gallery-item rsa-gallery-item rsa-gallery-item--6"><img
                       src="/images/Projects/new-car/New-car-review.jpg"
-                      loading="lazy" alt="application screenshot" class="case-study-gallery-image">
-                    <div class="heading-5">Trust and education content for researchers — build intent without pressure to buy.</div>
+                      loading="lazy" alt="Review and trust content screen" class="case-study-gallery-image">
+                    <div class="heading-5">Review: summary and trust content for people still researching.</div>
                   </div>
                 </div>
                 <div class="rsa-gallery-col rsa-gallery-col--right pd-tp-100">
@@ -385,22 +366,22 @@
                     <video class="case-study-gallery-image other" autoplay loop muted playsinline>
                       <source src="/videos/new-car-proto.mp4" type="video/mp4">
                     </video>
-                    <div class="heading-5">Motion walkthrough of the forked journey — from booking status through quote.</div>
+                    <div class="heading-5">Prototype walkthrough: booking status through to quote.</div>
                   </div>
                   <div class="case-study-gallery-item rsa-gallery-item rsa-gallery-item--3"><img
                       src="/images/Projects/new-car/New-car-plan.jpg"
-                      loading="lazy" alt="application screenshot" class="case-study-gallery-image">
-                    <div class="heading-5">Lock-in and incentive surfaces for finalised bookings — commit before the showroom visit.</div>
+                      loading="lazy" alt="Plan details screen" class="case-study-gallery-image">
+                    <div class="heading-5">Plans: coverage detail and lock in incentives.</div>
                   </div>
                   <div class="case-study-gallery-item rsa-gallery-item rsa-gallery-item--5"><img
                       src="/images/Projects/new-car/New-car-3year.webp"
-                      loading="lazy" alt="application screenshot" class="case-study-gallery-image">
-                    <div class="heading-5">Checkout completion and confirmation — dealer selection pre-payment where applicable.</div>
+                      loading="lazy" alt="Three year plan tenure screen" class="case-study-gallery-image">
+                    <div class="heading-5">Three year tenure: multi year plan choice at checkout.</div>
                   </div>
                   <div class="case-study-gallery-item rsa-gallery-item rsa-gallery-item--7"><img
                       src="/images/Projects/new-car/New-car-policy.webp"
-                      loading="lazy" alt="application screenshot" class="case-study-gallery-image">
-                    <div class="heading-5">Post-quote support and edge states — clarity when the path branches or pauses.</div>
+                      loading="lazy" alt="Policy confirmation screen" class="case-study-gallery-image">
+                    <div class="heading-5">Policy: confirmation and next steps after quote.</div>
                   </div>
                 </div>
               </div>
@@ -410,78 +391,93 @@
           <div id="impact" class="cs-offset-section">
             <div class="mw-860">
               <div class="heading-3">What the rollout showed</div>
-              <p class="cs-body">Three releases over three months. Each one had a hypothesis and a decision point — not just a traffic split.</p>
+              <p class="cs-body">Three releases over three months. Each one had a question to answer and a decision to make, not just a traffic split.</p>
 
               <div class="cs-impact-row">
                 <div class="cs-impact-item">
                   <div class="cs-impact-number">21%</div>
                   <div class="cs-impact-title">Old baseline</div>
-                  <div class="cs-impact-sub">Nov–Dec 2025</div>
+                  <div class="cs-impact-sub">Nov to Dec 2025</div>
                 </div>
                 <div class="cs-impact-item">
                   <div class="cs-impact-number">13%</div>
                   <div class="cs-impact-title">1% rollout</div>
-                  <div class="cs-impact-sub">Feb 2026 — signal caught</div>
+                  <div class="cs-impact-sub">Feb 2026, signal caught</div>
                 </div>
                 <div class="cs-impact-item">
                   <div class="cs-impact-number">34%</div>
                   <div class="cs-impact-title">50% rollout</div>
-                  <div class="cs-impact-sub">March — recovered</div>
+                  <div class="cs-impact-sub">March, recovered</div>
                 </div>
                 <div class="cs-impact-item">
                   <div class="cs-impact-number">65%</div>
                   <div class="cs-impact-title">100% rollout</div>
-                  <div class="cs-impact-sub">May — 3× baseline</div>
+                  <div class="cs-impact-sub">May, three times baseline</div>
                 </div>
-              </div>
-              <div class="cs-dark-block purple">
-                <div class="cs-final-quote">E2Q went from 13% at 1% to 34% at 50% after removing the landing page. The most useful signal from the 1% phase wasn't what worked — it was what didn't, fast enough to fix.</div>
               </div>
 
               <div class="cs-h3">What each stage taught us</div>
-              <p class="cs-body"><strong>1% — February 2026.</strong> E2Q at 13%, worse than baseline. Landing page had a 1% scroll rate. Plan naming confusion (1+3 vs 3+3 future scope leaked into UI). Killed the landing page, fixed the naming, did not scale until resolved.</p>
-              <p class="cs-body"><strong>50% — March 2026.</strong> E2Q at 34%, above baseline for the first time. Fork holding. Activist positioning landing. Dealer selection pre-payment working. Confidence to scale.</p>
-              <p class="cs-body"><strong>100% — April–May 2026.</strong> E2Q stabilised at 59–65% and continued improving. mweb — previously the weakest channel — consistent at ~55%. App at ~75–80%. 3× the baseline.</p>
+              <div class="acko-habit-loop-wrap">
+                <table class="acko-habit-loop-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Stage</th>
+                      <th scope="col">When</th>
+                      <th scope="col">What happened</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>1% of users</strong></td>
+                      <td>February 2026</td>
+                      <td class="acko-habit-loop-reward-cell">The landing page barely got scrolled. <strong>We cut it and fixed a confusing plan name at the same time.</strong></td>
+                    </tr>
+                    <tr>
+                      <td><strong>50% of users</strong></td>
+                      <td>March 2026</td>
+                      <td class="acko-habit-loop-reward-cell">The new flow held up. <strong>Entry to quote crossed the old baseline for the first time.</strong></td>
+                    </tr>
+                    <tr>
+                      <td><strong>100% of users</strong></td>
+                      <td>April to May 2026</td>
+                      <td class="acko-habit-loop-reward-cell">Numbers settled between <strong>59%</strong> and <strong>65%</strong>. Mobile web, previously the weakest channel, caught up to about <strong>55%</strong>.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
               <div class="cs-impact-row-col-2">
                 <div class="cs-impact-item">
                   <div class="cs-impact-number">~5%</div>
-                  <div class="cs-impact-title">Q2S held stable</div>
-                  <div class="cs-impact-sub">Across all stages — expected</div>
+                  <div class="cs-impact-title">Quote to sale held stable</div>
+                  <div class="cs-impact-sub">Across all stages, expected</div>
                 </div>
                 <div class="cs-impact-item">
                   <div class="cs-impact-number">3×</div>
-                  <div class="cs-impact-title">E2Q vs baseline</div>
+                  <div class="cs-impact-title">Entry to quote vs baseline</div>
                   <div class="cs-impact-sub">At full rollout</div>
                 </div>
               </div>
-              <p class="cs-body">Q2S held at ~5% across all stages — and that's expected. Quote-to-sale is downstream of when a user's car arrives, not how good the journey is. Knowing what design cannot fix is part of the work.</p>
+              <p class="cs-body">Quote to sale held at around <strong>5%</strong> through every stage of this project, and that's expected. It depends on when someone's car actually arrives, not on how good the journey is. <strong>Knowing what design can't fix is part of the job.</strong></p>
             </div>
           </div>
 
           <div id="reflection" class="cs-offset-section">
             <div class="mw-860">
               <div class="heading-3">What I'd do differently</div>
-              <p class="cs-body">Three things I'd change if I ran this project again. Each would have moved us faster or taught us more.</p>
+              <p class="cs-body">Two things I'd change if I ran this project again. Each would have moved us faster or taught us more.</p>
               <div class="cs-numbered-item">
                 <div class="cs-num">01</div>
                 <div class="cs-numbered-content">
                   <div class="cs-numbered-title">Start with ten internal journeys, not one</div>
-                  <div class="cs-numbered-desc">One internal user's real journey told me more than the entire PRD. The dealer dropping ₹1L to ₹35K, the 106 ghost variants, the blank payment screen — none of that was in the funnel data. Finding it was luck. Next time I'd commission ten of those before opening Figma.</div>
+                  <div class="cs-numbered-desc"><strong>One internal user's real journey told me more than any written brief.</strong> The dealer dropping <strong>one lakh to thirty five thousand</strong>, the <strong>106</strong> ghost variants, the blank payment screen. None of that was in the funnel data. Finding it was luck. Next time I'd commission ten of those before opening Figma.</div>
                 </div>
               </div>
               <div class="cs-numbered-item">
                 <div class="cs-num">02</div>
                 <div class="cs-numbered-content">
-                  <div class="cs-numbered-title">Push the fork to the very first screen</div>
-                  <div class="cs-numbered-desc">The booking status fork works — but it sits inside the funnel after MMV. Intent divergence happens before that. The product should know what user it's talking to from screen one, not three steps in.</div>
-                </div>
-              </div>
-              <div class="cs-numbered-item">
-                <div class="cs-num">03</div>
-                <div class="cs-numbered-content">
-                  <div class="cs-numbered-title">Treat the 1% phase as a timed decision sprint</div>
-                  <div class="cs-numbered-desc">We had enough signal to cut the landing page in week two. We waited a month. At 1% the cost of delay is low — but the discipline of cutting fast is exactly what graduated rollout is for. I'd set a hard decision date: two weeks to call what stays.</div>
+                  <div class="cs-numbered-title">Sell ACKO Drive once the car is picked, not before</div>
+                  <div class="cs-numbered-desc">Once someone picks their car's make and model but hasn't bought it yet, we know enough to make them a real offer. That's the moment to point them to ACKO Drive for a cheaper option, not the very start of the flow, where we don't know enough about the car yet to make the offer meaningful. Doing this earlier would have opened a second path to a sale, not just an insurance quote.</div>
                 </div>
               </div>
             </div>
@@ -500,14 +496,14 @@
       <div class="w-layout-grid grid-services">
         <a href="rsa.html" class="card-expertise-light design w-inline-block">
           <div class="service-text-wrapper">
-            <h3 class="heading-m">Transformed Acko RSA from calls to 2,188 digital cases at launch</h3>
+            <h3 class="heading-m">Transformed ACKO roadside assistance from calls to 2,188 digital cases at launch</h3>
             <div class="work-textlink-copy">
               <div class="text-link">Read case study</div>
               <img src="/images/icons/arrow-right-circle.svg" loading="lazy" alt="Arrow right" />
             </div>
           </div>
           <img src="/images/Projects/RSA-other.webp" loading="lazy"
-            sizes="(max-width: 479px) 65vw, (max-width: 767px) 58vw, (max-width: 991px) 67vw, 54vw" alt="ACKO RSA case study preview" class="work-featureimage design" />
+            sizes="(max-width: 479px) 65vw, (max-width: 767px) 58vw, (max-width: 991px) 67vw, 54vw" alt="ACKO roadside assistance case study preview" class="work-featureimage design" />
         </a>
         <a href="onboarding.html" class="card-expertise-light webflow w-inline-block">
           <div class="service-text-wrapper">
