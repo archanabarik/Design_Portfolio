@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Slice — Onboarding redesign | Case Study | Archana Kumari</title>
+  <title>slice, Onboarding redesign | Case Study | Archana Kumari</title>
   <meta
-    content="Redesigned Slice's onboarding to meet RBI KYC requirements while removing friction — 82% completion (from 45%), 20% drop-off reduction, 40% under 2 minutes."
+    content="Redesigned slice's onboarding to meet Reserve Bank of India identity verification requirements while removing friction. Completion rate went from 45% to 82%."
     name="description" />
-  <meta content="Slice — Onboarding redesign | Case Study | Archana Kumari" property="og:title" />
+  <meta content="slice, Onboarding redesign | Case Study | Archana Kumari" property="og:title" />
   <meta
-    content="Redesigned Slice's onboarding to meet RBI KYC requirements while removing friction — 82% completion from 45% baseline."
+    content="Redesigned slice's onboarding to meet Reserve Bank of India identity verification requirements while removing friction. Completion rate went from 45% to 82%."
     property="og:description" />
   <meta content="" property="og:image" />
-  <meta content="Slice — Onboarding redesign | Case Study | Archana Kumari" property="twitter:title" />
+  <meta content="slice, Onboarding redesign | Case Study | Archana Kumari" property="twitter:title" />
   <meta
-    content="Redesigned Slice's onboarding to meet RBI KYC requirements while removing friction — 82% completion from 45% baseline."
+    content="Redesigned slice's onboarding to meet Reserve Bank of India identity verification requirements while removing friction. Completion rate went from 45% to 82%."
     property="twitter:description" />
   <meta content="" property="twitter:image" />
   <meta property="og:type" content="website" />
@@ -81,7 +81,7 @@
       -webkit-text-stroke-color: black;
     }
 
-    /* Slice layout helpers — aligned to ACKO case-study style */
+    /* slice layout helpers, aligned to ACKO case-study style */
     .slice-cs {
       --accent: #b91c1c;
       --accent-light: #f3f4f6;
@@ -119,14 +119,23 @@
       color: #374151;
     }
 
-    .slice-snapshot-grid,
     .slice-problem-opp,
-    .slice-persona-grid,
-    .slice-decision-body {
+    .slice-persona-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 12px;
       margin: 24px 0 0;
+    }
+
+    .slice-snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 8px 0 0;
+    }
+
+    @media (max-width: 767px) {
+      .slice-snapshot-grid { grid-template-columns: 1fr; }
     }
 
     .slice-snapshot-item {
@@ -330,87 +339,89 @@
 
     .slice-insight {
       display: grid;
-      grid-template-columns: 48px 1fr;
+      grid-template-columns: 32px 1fr;
       gap: 16px;
-      padding: 20px 0;
+      padding: 18px 0;
       border-bottom: 1px solid var(--border);
     }
 
     .slice-insight:last-child { border-bottom: none; }
 
     .slice-insight-num {
-      font-size: 28px;
+      font-size: 13px;
       font-weight: 700;
-      color: var(--text);
-      line-height: 1;
+      color: var(--accent);
+      line-height: 1.6;
+      letter-spacing: 0.02em;
     }
 
     .slice-insight-title {
       font-size: 16px;
-      font-weight: 500;
-      margin: 0 0 6px;
+      font-weight: 600;
+      margin: 0 0 4px;
       color: var(--text);
     }
 
     .slice-insight-detail {
       font-size: 14px;
+      font-weight: 400;
       color: var(--text-muted);
       margin: 0;
       line-height: 1.55;
     }
 
-    .slice-decision-card {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--bg);
-    }
-
     .slice-decisions {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      margin-top: 24px;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .slice-decisions-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .slice-decision-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
     }
 
     .slice-decision-head {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 16px 20px;
-      background: var(--callout-bg);
+      flex-direction: column-reverse;
+      gap: 5px;
+      align-items: flex-start;
+      padding: 12px 14px 10px;
       border-bottom: 1px solid var(--border);
     }
 
-    .slice-decision-card:has(.slice-decision-badge.reject) .slice-decision-head {
-      background: var(--red-light);
-    }
-
-    .slice-decision-card:has(.slice-decision-badge.accept) .slice-decision-head {
-      background: var(--green-light);
-    }
-
     .slice-decision-title {
-      font-size: 15px;
-      font-weight: 500;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
       margin: 0;
       color: var(--text);
     }
 
     .slice-decision-badge {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
-      padding: 4px 10px;
+      padding: 2px 8px;
       border-radius: 4px;
     }
 
     .slice-decision-badge.reject {
-      background: var(--red-light);
-      color: var(--red);
+      background: #f3f4f6;
+      color: #6b7280;
     }
 
     .slice-decision-badge.accept {
@@ -418,27 +429,70 @@
       color: var(--green-dark);
     }
 
-    .slice-decision-col {
-      padding: 16px 20px;
-      border-right: 1px solid var(--border);
+    .slice-decision-body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 12px 14px 14px;
     }
 
-    .slice-decision-col:last-child { border-right: none; }
+    .slice-decision-col { padding: 0; border: none; }
 
     .slice-decision-col-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 3px;
       color: var(--text-muted);
     }
 
     .slice-decision-col p {
       margin: 0;
       font-size: 13px;
+      font-weight: 400;
       line-height: 1.5;
       color: var(--text);
+    }
+
+    /* The one accepted direction: visually separated and highlighted */
+    .slice-decision-card.is-accepted {
+      border: 1.5px solid var(--green-dark);
+      background: var(--green-light);
+    }
+
+    .slice-decision-card.is-accepted .slice-decision-head {
+      padding: 16px 20px 12px;
+      border-bottom-color: rgba(22, 163, 74, 0.25);
+    }
+
+    .slice-decision-card.is-accepted .slice-decision-title {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .slice-decision-card.is-accepted .slice-decision-title::before {
+      content: "✓";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--green-dark);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .slice-decision-card.is-accepted .slice-decision-body {
+      padding: 16px 20px 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
     .slice-results-table {
@@ -540,12 +594,14 @@
     }
 
     @media (max-width: 767px) {
-      .slice-decision-col {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
+      .slice-decisions-row {
+        grid-template-columns: 1fr;
       }
 
-      .slice-decision-col:last-child { border-bottom: none; }
+      .slice-decision-card.is-accepted .slice-decision-body {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
 
       .slice-results-row {
         grid-template-columns: 1fr;
@@ -555,6 +611,24 @@
       .slice-results-row.is-head { display: none; }
 
       .slice-flow-branch { gap: 24px; }
+    }
+
+    /* Key learnings: number as a small marker, learning text as the prominent, regular-weight content */
+    .slice-learnings-list .cs-num {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      min-width: auto;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+
+    .slice-learnings-list .cs-numbered-title {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.55;
+      color: var(--text);
+      margin-bottom: 0;
     }
 
   </style>
@@ -598,12 +672,12 @@
   <div class="section pt-120 pb-0 section-overflow-visible slice-cs">
     <div class="w-container">
       <h1 class="cs-title">Turning a compliance-heavy flow into an 82% completion rate</h1>
-      <p class="cs-body">Redesigned Slice's onboarding experience to meet RBI KYC requirements while removing the friction that was causing over half of users to abandon before activation.</p>
+      <p class="cs-body">Redesigned slice's onboarding to meet identity verification requirements set by the <strong>Reserve Bank of India</strong>, India's central bank and financial regulator, while removing the friction that was causing over half of users to abandon before activation.</p>
     </div>
 
     <div class="container"><img src="/images/Projects/slice/slice-thumnail-desktop.webp" loading="lazy"
         sizes="(max-width: 767px) 93vw, (max-width: 991px) 92vw, 78vw"
-        alt="Slice onboarding redesign"
+        alt="slice onboarding redesign"
         class="cs-cover-image" />
     </div>
 
@@ -623,19 +697,25 @@
 
         <div class="cs-case-main">
 
-          <!-- 1. Header metrics + snapshot -->
+          <!-- 1. Project snapshot -->
+          <div id="snapshot" class="cs-offset-section">
+            <div class="mw-860">
+              <div class="slice-snapshot-grid">
+                <div class="slice-snapshot-item"><span>Role</span>UX designer and researcher</div>
+                <div class="slice-snapshot-item"><span>Duration</span>3 months</div>
+                <div class="slice-snapshot-item"><span>Team</span>Product manager, 2 engineers, QA, and legal</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Header metrics -->
           <div id="summary" class="cs-summary-section">
             <div class="mw-860">
-              <div class="cs-impact-row-col-3">
+              <div class="cs-impact-row-col-2">
                 <div class="cs-impact-item">
                   <div class="cs-impact-number">82%</div>
                   <div class="cs-impact-title">Completion rate</div>
                   <div class="cs-impact-sub">Up from 45% pre-redesign</div>
-                </div>
-                <div class="cs-impact-item">
-                  <div class="cs-impact-number">20%</div>
-                  <div class="cs-impact-title">Drop-off reduction</div>
-                  <div class="cs-impact-sub">Post credit-check abandonment</div>
                 </div>
                 <div class="cs-impact-item">
                   <div class="cs-impact-number">40%</div>
@@ -650,49 +730,21 @@
           <div id="problem" class="cs-offset-section">
             <div class="mw-860">
               <div class="heading-3">The problem space</div>
-              <p class="cs-body">I looked at the existing onboarding and found a clear pattern: over half of people who started never finished. The leaks weren't scattered — they clustered at three steps.</p>
+              <p class="cs-body">I looked at the existing onboarding and found a clear pattern: over half of people who started never finished. The leaks weren't scattered, they clustered at three steps.</p>
 
-              <div class="slice-flow-panel">
-                <p class="slice-flow-label">Old onboarding flow — drop-off points</p>
-                <div class="slice-flow-row">
-                  <div class="slice-flow-step">Phone number</div>
-                  <span class="slice-flow-arrow">→</span>
-                  <div class="slice-flow-step">OTP</div>
-                  <span class="slice-flow-arrow">→</span>
-                  <div class="slice-flow-step">Name</div>
-                  <span class="slice-flow-arrow">→</span>
-                  <div class="slice-flow-step">User type</div>
-                  <span class="slice-flow-arrow">→</span>
-                  <div class="slice-flow-step is-drop">PAN image upload</div>
-                </div>
-                <div class="slice-flow-row">
-                  <div class="slice-flow-step">Company name</div>
-                  <span class="slice-flow-arrow">→</span>
-                  <div class="slice-flow-step">Company city</div>
-                  <span class="slice-flow-arrow">→</span>
-                  <div class="slice-flow-step">Salary range</div>
-                  <span class="slice-flow-arrow">→</span>
-                  <div class="slice-flow-step">PF deducted</div>
-                </div>
-                <div class="slice-flow-row">
-                  <div class="slice-flow-step is-drop">Address upload</div>
-                  <span class="slice-flow-arrow">→</span>
-                  <div class="slice-flow-step">Selfie</div>
-                  <span class="slice-flow-arrow">→</span>
-                  <div class="slice-flow-step is-drop">Wait 24–48 hrs</div>
-                </div>
-              </div>
+              <img src="/images/Projects/slice/slice-old-journey-flowchart.webp" loading="lazy"
+                alt="Old onboarding flow, drop-off points" class="cs-image" />
 
               <div class="slice-problem-opp">
                 <div class="slice-problem-box">
                   <div class="slice-box-tag slice-box-tag-red">The problem</div>
                   <h4>Over half dropping off</h4>
-                  <p>Three steps accounted for majority of abandonment: PAN image upload, address upload, 24–48hr wait.</p>
+                  <p>Three steps accounted for majority of abandonment: PAN image upload, address upload, <strong>24 to 48 hour</strong> wait.</p>
                 </div>
                 <div class="slice-opp-box">
                   <div class="slice-box-tag slice-box-tag-green">The opportunity</div>
                   <h4>Automate the hard parts</h4>
-                  <p>Replace manual document uploads with automated data fetches, show credit limit at end to remove uncertainty of waiting.</p>
+                  <p>Replace manual document uploads with automatic data fetches, and remove the old wait entirely so approval shows the moment verification finishes, not one to two days later.</p>
                 </div>
               </div>
             </div>
@@ -702,7 +754,7 @@
           <div id="people" class="cs-offset-section">
             <div class="mw-860">
               <div class="heading-3">The people we designed for</div>
-              <p class="cs-body">I grounded the redesign in two user types we kept seeing in interviews — first-timers who needed reassurance, and experienced users who refused to re-enter data Slice already had.</p>
+              <p class="cs-body">I grounded the redesign in two user types we kept seeing in interviews, first-timers who needed reassurance, and experienced users who refused to re-enter data slice already had.</p>
 
               <div class="slice-persona-grid">
                 <div class="slice-persona-card">
@@ -713,7 +765,7 @@
                     <li>Wants quick approval and clear next steps</li>
                     <li>Gets anxious when asked for documents without knowing if she qualifies</li>
                   </ul>
-                  <p class="slice-persona-quote">“If I'm approved, tell me now — then I'll finish the rest.”</p>
+                  <p class="slice-persona-quote">“If I qualify, show me something now, then I'll finish the rest.”</p>
                 </div>
                 <div class="slice-persona-card">
                   <div class="slice-persona-meta">Experienced credit card user</div>
@@ -739,21 +791,21 @@
                 <div class="slice-insight-num">01</div>
                 <div>
                   <h4 class="slice-insight-title">Funnel identified three critical leaks</h4>
-                  <p class="slice-insight-detail">Analytics confirmed biggest exits at PAN image upload, proof of address upload, and 24–48hr activation wait. These became the primary targets.</p>
+                  <p class="slice-insight-detail">Analytics confirmed biggest exits at PAN image upload, proof of address upload, and <strong>24 to 48 hour</strong> activation wait. These became the primary targets.</p>
                 </div>
               </div>
               <div class="slice-insight">
                 <div class="slice-insight-num">02</div>
                 <div>
                   <h4 class="slice-insight-title">Users resisted giving documents before knowing if they'd be approved</h4>
-                  <p class="slice-insight-detail">Every interview participant said being asked for documents before any approval signal felt unfair. Validated showing credit score early as a motivation anchor.</p>
+                  <p class="slice-insight-detail">In five interviews, every single person said being asked for documents before knowing anything about their approval felt unfair. This told me the credit check itself needed to happen, and show something back to the user, before asking for the remaining verification steps.</p>
                 </div>
               </div>
               <div class="slice-insight">
                 <div class="slice-insight-num">03</div>
                 <div>
                   <h4 class="slice-insight-title">Competitors had already found a compliant path</h4>
-                  <p class="slice-insight-detail">CRED and Paytm both deferred some KYC steps until after provisional approval. I used this as evidence to bring to the legal team.</p>
+                  <p class="slice-insight-detail">CRED and Paytm, other Indian fintech apps, both deferred some identity verification steps until after provisional approval. I used this as evidence to bring to the legal team.</p>
                 </div>
               </div>
             </div>
@@ -766,86 +818,88 @@
               <p class="cs-body">I explored four directions. Three I rejected. One I took to legal and shipped.</p>
 
               <div class="slice-decisions">
-                <div class="slice-decision-card">
-                  <div class="slice-decision-head">
-                    <h4 class="slice-decision-title">Full KYC upfront</h4>
-                    <span class="slice-decision-badge reject">Rejected</span>
+                <div class="slice-decisions-row">
+                  <div class="slice-decision-card">
+                    <div class="slice-decision-head">
+                      <h4 class="slice-decision-title">Full identity verification upfront</h4>
+                      <span class="slice-decision-badge reject">Rejected</span>
+                    </div>
+                    <div class="slice-decision-body">
+                      <div class="slice-decision-col">
+                        <div class="slice-decision-col-label">Pros</div>
+                        <p>Safest option for compliance, no work left after approval.</p>
+                      </div>
+                      <div class="slice-decision-col">
+                        <div class="slice-decision-col-label">Cons</div>
+                        <p>High drop off at the document upload steps, long time before the user sees any value.</p>
+                      </div>
+                      <div class="slice-decision-col">
+                        <div class="slice-decision-col-label">Why rejected</div>
+                        <p>Keeps the exact problem we were trying to fix.</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="slice-decision-body">
-                    <div class="slice-decision-col">
-                      <div class="slice-decision-col-label">Pros</div>
-                      <p>Compliance-safe, no post-approval work</p>
+
+                  <div class="slice-decision-card">
+                    <div class="slice-decision-head">
+                      <h4 class="slice-decision-title">Shortened upfront form</h4>
+                      <span class="slice-decision-badge reject">Rejected</span>
                     </div>
-                    <div class="slice-decision-col">
-                      <div class="slice-decision-col-label">Cons</div>
-                      <p>High drop-offs at doc uploads, long time to value</p>
+                    <div class="slice-decision-body">
+                      <div class="slice-decision-col">
+                        <div class="slice-decision-col-label">Pros</div>
+                        <p>Easier to start, no backend changes needed.</p>
+                      </div>
+                      <div class="slice-decision-col">
+                        <div class="slice-decision-col-label">Cons</div>
+                        <p>Still asks for address proof upfront, the actual friction stays.</p>
+                      </div>
+                      <div class="slice-decision-col">
+                        <div class="slice-decision-col-label">Why rejected</div>
+                        <p>Fixes how the form feels, not what's actually causing people to leave.</p>
+                      </div>
                     </div>
-                    <div class="slice-decision-col">
-                      <div class="slice-decision-col-label">Why rejected</div>
-                      <p>Doesn't solve the problem, maintains status quo</p>
+                  </div>
+
+                  <div class="slice-decision-card">
+                    <div class="slice-decision-head">
+                      <h4 class="slice-decision-title">Credit check and identity verification run at the same time</h4>
+                      <span class="slice-decision-badge reject">Rejected</span>
+                    </div>
+                    <div class="slice-decision-body">
+                      <div class="slice-decision-col">
+                        <div class="slice-decision-col-label">Pros</div>
+                        <p>Faster total time if everything works.</p>
+                      </div>
+                      <div class="slice-decision-col">
+                        <div class="slice-decision-col-label">Cons</div>
+                        <p>More technical complexity connecting both systems at once, and if either check fails, the user has gone through both processes for nothing.</p>
+                      </div>
+                      <div class="slice-decision-col">
+                        <div class="slice-decision-col-label">Why rejected</div>
+                        <p>The failure case is worse than the current slow version.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="slice-decision-card">
+                <div class="slice-decision-card is-accepted">
                   <div class="slice-decision-head">
-                    <h4 class="slice-decision-title">Shortened upfront form</h4>
-                    <span class="slice-decision-badge reject">Rejected</span>
-                  </div>
-                  <div class="slice-decision-body">
-                    <div class="slice-decision-col">
-                      <div class="slice-decision-col-label">Pros</div>
-                      <p>Easier start, no backend change</p>
-                    </div>
-                    <div class="slice-decision-col">
-                      <div class="slice-decision-col-label">Cons</div>
-                      <p>Still front-loads address proof, core friction remains</p>
-                    </div>
-                    <div class="slice-decision-col">
-                      <div class="slice-decision-col-label">Why rejected</div>
-                      <p>Addresses symptoms not root cause</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="slice-decision-card">
-                  <div class="slice-decision-head">
-                    <h4 class="slice-decision-title">Parallel credit check + KYC</h4>
-                    <span class="slice-decision-badge reject">Rejected</span>
-                  </div>
-                  <div class="slice-decision-body">
-                    <div class="slice-decision-col">
-                      <div class="slice-decision-col-label">Pros</div>
-                      <p>Faster total time</p>
-                    </div>
-                    <div class="slice-decision-col">
-                      <div class="slice-decision-col-label">Cons</div>
-                      <p>Tech/API complexity; if either fails, user leaves with nothing</p>
-                    </div>
-                    <div class="slice-decision-col">
-                      <div class="slice-decision-col-label">Why rejected</div>
-                      <p>Failure mode is worse than current state</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="slice-decision-card">
-                  <div class="slice-decision-head">
-                    <h4 class="slice-decision-title">Approval-first with automated KYC steps</h4>
+                    <h4 class="slice-decision-title">Automate identity verification and remove the wait</h4>
                     <span class="slice-decision-badge accept">Accepted</span>
                   </div>
                   <div class="slice-decision-body">
                     <div class="slice-decision-col">
                       <div class="slice-decision-col-label">Pros</div>
-                      <p>Early win for user, less early friction, RBI-compliant before card issue</p>
+                      <p>Removes manual document uploads entirely for most users, and removes the old one to two day wait since verification now happens automatically and fast.</p>
                     </div>
                     <div class="slice-decision-col">
                       <div class="slice-decision-col-label">Cons</div>
-                      <p>Needs backend sequencing and compliance sign-off</p>
+                      <p>Needs real backend work, connecting to the credit bureau, an agency that holds a person's credit history and score, the national identity registry, and getting compliance sign off on the new sequence.</p>
                     </div>
                     <div class="slice-decision-col">
                       <div class="slice-decision-col-label">Why accepted</div>
-                      <p>Removes the three highest drop-off steps while staying fully compliant</p>
+                      <p>This is the only option that fixes all three of the actual drop off points, PAN document upload, address document upload, and the long wait, while keeping every regulatory requirement fully intact.</p>
                     </div>
                   </div>
                 </div>
@@ -853,11 +907,23 @@
             </div>
           </div>
 
-          <!-- 6. Final designs -->
+          <!-- 6. The shipped flow -->
+          <div id="shipped-flow" class="cs-offset-section">
+            <div class="mw-860">
+              <div class="heading-3">The flow we shipped</div>
+              <p class="cs-body">I connected the flow to the credit bureau and to CKYC, a shared national registry that stores identity verification someone has already completed elsewhere, so it doesn't need to be repeated. For the small number of people not already in CKYC, we ran a quick Aadhaar check, India's national identity number system, instead of asking for a document.</p>
+
+              <img src="/images/Projects/slice/slice-new-onboarding-flow-chart.webp" loading="lazy"
+                alt="New onboarding flow, what ships today" class="cs-image" />
+              <p class="cs-caption" style="margin-top:8px;">Every manual document step from the old flow became an automatic fetch. The only thing still asked of the user directly is a selfie.</p>
+            </div>
+          </div>
+
+          <!-- 7. Final designs -->
           <div id="final-design" class="cs-offset-section">
             <div class="mw-860">
               <div class="heading-3">Final designs</div>
-              <p class="cs-body">I redesigned the sequence around motivation: show eligibility early, automate the document steps, and end with something usable — not a wait screen.</p>
+              <p class="cs-body">I built the flow around one idea: show the credit score early, automate every document step that used to need a manual upload, and end with the approved limit instead of a wait screen.</p>
 
               <div class="slice-proto-video-wrap">
                 <video id="prototype-placeholder" class="slice-proto-video" autoplay loop muted playsinline>
@@ -867,11 +933,11 @@
             </div>
           </div>
 
-          <!-- 7. Results & impact -->
+          <!-- 8. Results & impact -->
           <div id="results" class="cs-offset-section">
             <div class="mw-860">
               <div class="heading-3">Results &amp; impact</div>
-              <p class="cs-body">The redesign moved the completion rate from 45% to 82%. Document-step drop-off fell 20%. Forty percent of users finished sign-up in under two minutes.</p>
+              <p class="cs-body">The redesign moved the completion rate from 45% to <strong>82%</strong>. Forty percent of users finished sign-up in under two minutes.</p>
 
               <div class="slice-results-table">
                 <div class="slice-results-row is-head">
@@ -887,12 +953,6 @@
                   <div><span class="slice-results-status">Achieved</span></div>
                 </div>
                 <div class="slice-results-row">
-                  <div>Drop-off at document steps</div>
-                  <div>−20%</div>
-                  <div><strong>−20%</strong></div>
-                  <div><span class="slice-results-status">Achieved</span></div>
-                </div>
-                <div class="slice-results-row">
                   <div>Users completing in under 2 min</div>
                   <div>Reduce perceived wait</div>
                   <div><strong>40%</strong></div>
@@ -901,16 +961,11 @@
               </div>
 
               <!-- Hidden for now
-              <div class="cs-impact-row-col-3">
+              <div class="cs-impact-row-col-2">
                 <div class="cs-impact-item">
                   <div class="cs-impact-number">82%</div>
                   <div class="cs-impact-title">Completion rate</div>
                   <div class="cs-impact-sub">Up from 45% pre-redesign</div>
-                </div>
-                <div class="cs-impact-item">
-                  <div class="cs-impact-number">20%</div>
-                  <div class="cs-impact-title">Drop-off reduction</div>
-                  <div class="cs-impact-sub">Post credit-check abandonment</div>
                 </div>
                 <div class="cs-impact-item">
                   <div class="cs-impact-number">40%</div>
@@ -927,9 +982,9 @@
             <div class="mw-860">
               <div class="heading-3">Why it worked</div>
               <ul class="slice-why-list">
-                <li>Users saw value — credit score and approved limit — before doing the most tedious parts</li>
-                <li>The three highest drop-off steps were automated or eliminated, not just redesigned</li>
-                <li>RBI compliance stayed fully intact — full KYC completed before card issue, just in a better sequence</li>
+                <li>The credit check ran early enough that people had a real signal about their standing before doing anything else.</li>
+                <li>Every manual document step was replaced with an automatic fetch instead of just being redesigned to feel shorter.</li>
+                <li>Full identity verification still happened before the card was issued, nothing about the regulation changed, only how fast and how manually each step ran.</li>
               </ul>
             </div>
           </div>
@@ -938,13 +993,13 @@
           <div id="learnings" class="cs-offset-section">
             <div class="mw-860">
               <div class="heading-3">Key learnings</div>
-              <p class="cs-body">What I'd carry forward</p>
+              <p class="cs-body">What I'd do again</p>
 
-              <div>
+              <div class="slice-learnings-list">
                 <div class="cs-numbered-item">
                   <div class="cs-num">01</div>
                   <div class="cs-numbered-content">
-                    <div class="cs-numbered-title">Compliance can be an enabler if you involve the legal team early — they helped find the compliant path, not block it</div>
+                    <div class="cs-numbered-title">Compliance can be an enabler if you involve the legal team early, they helped find the compliant path, not block it</div>
                   </div>
                 </div>
                 <div class="cs-numbered-item">
@@ -962,7 +1017,7 @@
                 <div class="cs-numbered-item">
                   <div class="cs-num">04</div>
                   <div class="cs-numbered-content">
-                    <div class="cs-numbered-title">Showing progress and early wins — like the credit score reveal — keeps users motivated to complete the rest</div>
+                    <div class="cs-numbered-title">Showing progress and early wins, like the credit score reveal, keeps users motivated to complete the rest</div>
                   </div>
                 </div>
               </div>
@@ -982,7 +1037,7 @@
       <div class="w-layout-grid grid-services">
         <a href="new-car.html" class="card-expertise-light design w-inline-block">
           <div class="service-text-wrapper">
-            <h3 class="heading-m">New car insurance built around intent — 3× funnel improvement</h3>
+            <h3 class="heading-m">New car insurance built around intent, 3× funnel improvement</h3>
             <div class="work-textlink-copy">
               <div class="text-link">Read case study</div>
               <img src="/images/icons/arrow-right-circle.svg" loading="lazy" alt="Arrow right" />
