@@ -16,28 +16,28 @@
     {
       match: /rsa\.html/i,
       questions: [
-        "Why cut 14 questions down to 6?",
-        "How did ops react to the air pump idea?",
-        "What was your role vs the PM's here?",
-        "What would you do differently on this one?",
+        "What was the hardest part of this project?",
+        "What was Acko actually asking you to fix?",
+        "What are you most proud of here?",
+        "Tell me the story behind this one",
       ],
     },
     {
       match: /new-car\.html/i,
       questions: [
-        "Why fork the journey by booking status?",
-        "Why kill the landing page at 1% rollout?",
-        "Isn't 5% Q2S a failure?",
-        "How much of the 3x was design vs pricing?",
+        "What was the hardest part of this project?",
+        "What was broken before you stepped in?",
+        "Is this impact mostly design, or the business?",
+        "Tell me the story behind this one",
       ],
     },
     {
       match: /onboarding\.html/i,
       questions: [
-        "How did you get legal to approve this?",
-        "Why reject the other 3 directions?",
-        "Were the personas from real interviews?",
-        "What's your role vs the PM's?",
+        "What was the hardest part of this project?",
+        "How did you balance rules with user experience?",
+        "What are you most proud of here?",
+        "Tell me the story behind this one",
       ],
     },
     {
@@ -45,26 +45,26 @@
       questions: [
         "Which project are you proudest of?",
         "What do these projects have in common?",
-        "Tell me about the RSA project",
+        "Tell me about the roadside assistance project",
         "Tell me about the new car insurance project",
       ],
     },
     {
       match: /about\.html/i,
       questions: [
-        "How did you go from dev to design?",
-        "What's your design philosophy in practice?",
-        "How do you mentor at Growth School?",
-        "What does 'designing with AI, not through it' mean?",
+        "Why did you move from development to design?",
+        "What's your approach to design, in plain words?",
+        "How do you mentor other designers?",
+        "What do you think about AI and design?",
       ],
     },
     {
       match: /contact\.html/i,
       questions: [
         "Are you open to new opportunities?",
-        "What kind of roles are you looking for?",
-        "Why should we hire you?",
-        "How can I reach you directly?",
+        "What kind of roles interest you?",
+        "Why should someone hire you?",
+        "What's the best way to reach you?",
       ],
     },
   ];
@@ -72,10 +72,10 @@
   const DEFAULT_SUGGESTIONS = [
     // shown on the homepage, or any page that doesn't match a set above —
     // a deliberate mix across projects, AI views, and background
-    "How did you go from dev to design?",
-    "What do you think about AI taking over design?",
-    "Tell me about the RSA project",
-    "How do you use AI day to day?",
+    "Why did you move from development to design?",
+    "What do you think about AI and design?",
+    "Tell me about a project you're proud of",
+    "How do you use AI in your everyday work?",
   ];
 
   function getSuggestionsForPage() {
@@ -86,30 +86,88 @@
 
   // Demo-only canned answers so you can see the widget working before the
   // real backend is wired up. Replace with live API once AA_CONFIG.apiUrl is set.
+  // Answers are written as short stories (what was broken, what we did, what
+  // happened) rather than bullet-style facts, so someone with no design
+  // background can follow along. Entries with a `page` regex only fire on
+  // that page — this lets a generic question like "what was the hardest
+  // part?" resolve to the right project depending on where it's asked.
   const DEMO_QA = [
+    // -- background & philosophy (no page restriction) --
     {
-      match: /dev.*design|front.?end.*design|became a designer|dev to design/i,
-      answer: "I started as a front-end developer for about two years. I liked making things look and feel right more than wiring up the logic behind them, so I moved into design at Box8 in 2019 — and immediately got to build a design system, which was a steep but useful start. The engineering background still helps: I can talk to developers in their language and I know what's actually feasible to ship.",
+      match: /dev.*design|front.?end.*design|became a designer|move(d)?\s*from\s*development/i,
+      answer:
+        "It wasn't one lightning-bolt moment, more something I noticed slowly. I started as a front-end developer, and I genuinely liked the craft of it — but I kept noticing I was more excited by whether something felt right to use than by how clean the code behind it was. After about two years of that nagging feeling, I made the jump and joined Box8 as a designer in 2019. And almost immediately I was thrown into building a design system, which was a hard way to start, but it meant I learned structure early instead of picking it up later. The dev background never really left me, though — I still think in systems, and I can sit in a room with engineers and actually follow the constraints they're describing instead of just nodding along.",
     },
     {
-      match: /ai.*(take over|replace|taking over)|will ai/i,
-      answer: "I don't think AI takes over design, but it does take over a lot of the production work that used to eat a designer's week. The judgment — what problem is worth solving, what trade-off to make, what 'good' looks like for this specific user — still has to come from a person. My view is closer to \"designing with AI, not through it.\"",
+      match: /ai.*(take over|replace|taking over)|ai and design/i,
+      answer:
+        "I get asked this a lot, and my honest take is that AI doesn't take over design — but it has quietly taken over a lot of the busywork that used to fill a designer's week, like the fifth version of a button or the fortieth layout variation. What it can't take over is judgment: deciding which problem is even worth solving, what trade-off to make when two good options conflict, what \"done\" actually looks like for a specific, messy, real user. That part still has to come from a person who's accountable for the outcome. I think of it less as AI replacing design, and more as designing with AI sitting next to me, not doing the thinking for me.",
     },
     {
-      match: /use ai|day.to.day|daily.*ai|ai.*workflow/i,
-      answer: "Day to day, I use AI to speed up research synthesis, early prototyping, and iteration — the parts that used to take hours of repetitive work. I still own the judgment and the final call myself.",
+      match: /use ai|day.to.day|daily.*ai|ai.*workflow|everyday work/i,
+      answer:
+        "Day to day it's less dramatic than people expect. I mostly use it to compress the slow parts — pulling patterns out of a pile of research notes, or getting a rough prototype up fast enough to react to instead of just imagining it in my head. What I still do myself is decide which of those directions is actually right, and why. That judgment call is where the real work still lives.",
     },
+    {
+      match: /approach to design|design philosophy/i,
+      answer:
+        "If I had to put it simply: I try not to design the interface first. My instinct is to go find out what's actually broken underneath — on the roadside assistance project, that meant reading through thousands of call records before sketching a single screen. Once I understand the real shape of the problem, the interface tends to follow naturally, almost like the last step rather than the first one.",
+    },
+    {
+      match: /mentor/i,
+      answer:
+        "At Growth School I mentor early-career designers, and honestly, most of what I pass on is stuff I had to learn the hard way myself — how to defend a design decision with data instead of just taste, how to know when to push back on a stakeholder and when to let it go. It's less about teaching tools and more about teaching judgment.",
+    },
+
+    // -- cross-project questions (work index page) --
+    {
+      match: /proudest/i,
+      answer:
+        "That's a tough one to answer in one line, but if I had to pick, it's probably the roadside assistance project — not because the metrics were the biggest, but because it's the one where the stakes were most human. Someone calling in is usually having a genuinely bad day, and knowing the thing I built actually made that moment less scary means more to me than a usage number.",
+    },
+    {
+      match: /in common/i,
+      answer:
+        "If there's a thread through all of them, it's that the brief I was handed was slightly wrong each time, and the real problem had to be discovered, not just taken at face value. Roadside assistance looked like an app-quality problem, but it was really a trust problem. The new car journey looked like a funnel problem, but it was really about intent. Onboarding looked like a compliance-versus-conversion trade-off, but it was really a sequencing problem. Most of my job is finding that gap before I design anything.",
+    },
+
+    // -- RSA (named explicitly, or generic phrase scoped to that page) --
     {
       match: /rsa|roadside/i,
-      answer: "RSA was a 0-to-1 project at Acko: turning a phone-dependent roadside assistance service into something self-serve. The real problem wasn't the app, it was trust — people didn't believe help would actually come. We cut the intake questions from 14 to 6, made live tracking central, and it launched handling 2,188 cases with resolution time cut in half. Want the full case study? [View it here](/Works/rsa.html)",
+      answer:
+        "This one started at Acko, where roadside assistance already existed but almost nobody used it. The brief I was handed assumed the app itself was the problem — too clunky, needed fixing. But when I actually went through thousands of call records, the real story was different: most people didn't even know the service existed, and the ones who did didn't trust that help would actually show up. So the job wasn't to build a better form, it was to make someone stranded on the road, in the dark, actually feel like help was on the way. That shift changed everything downstream, right down to cutting the intake questions from 14 to 6, because nobody panicking on a highway is going to sit through 14 questions. It launched handling over 2,000 cases digitally, with resolution time cut in half. [Read the full story](/Works/rsa.html)",
     },
+    {
+      match: /hardest part|proud.*here|story behind|what was.*asking|broken before/i,
+      page: /rsa\.html/i,
+      answer:
+        "Honestly, the hardest part wasn't the screens, it was realizing the problem itself had been misdiagnosed. The original brief said \"make the app better,\" but the data told a different story — people weren't struggling with the app, they simply didn't trust it enough to open it in an emergency. Once I reframed it that way, the real fight became cutting the intake form from 14 questions down to 6. Operations wanted all 14 for dispatch accuracy, but I kept asking: would someone stranded and scared actually answer 14 questions? We mapped which ones truly mattered, shipped with 6, and ops still got what they needed. It's a small decision on paper, but it's the kind of thing that changes whether a real person gets help faster.",
+    },
+
+    // -- new car insurance --
     {
       match: /new car|funnel/i,
-      answer: "The new car insurance journey was converting only 21% of visitors to a quote. The issue wasn't friction, it was that we were treating very different users the same way — someone two weeks from delivery and someone who just started browsing. We forked the journey by purchase intent and took E2Q to 65%, a 3x lift. [Full case study](/Works/new-car.html)",
+      answer:
+        "Acko's new car insurance journey was only converting 21% of visitors to a quote, and the obvious read was \"too many steps, simplify it.\" But when I dug into the data, I found two very different people being shown the exact same journey — someone who'd just started browsing cars, and someone picking theirs up from the dealer tomorrow. No wonder it wasn't working for either of them. So instead of trimming steps, we split the journey by intent. That structural change, not interface polish, is what actually moved the number — E2Q went from 21% to 65%, a 3x lift. [Read the full story](/Works/new-car.html)",
     },
     {
+      match: /hardest part|broken before|business|what was broken/i,
+      page: /new-car\.html/i,
+      answer:
+        "The hardest part was realizing this wasn't really a funnel problem, even though the data made it look like one. The brief said \"too many steps,\" but the real issue was that one journey was trying to serve two completely different people at once. Splitting it by purchase intent was the design call that unlocked most of the lift. That said, I'd be lying if I claimed it was all design — quote-to-sale stayed flat around 5% the whole time, because that depends on when someone's car physically arrives, not on how good the app is. Knowing which numbers design can actually move, and which ones it can't, is part of doing this work honestly.",
+    },
+
+    // -- slice onboarding --
+    {
       match: /slice|onboarding|kyc/i,
-      answer: "Slice's onboarding was losing over half of users, mostly at document upload steps. We moved to an approval-first flow — show the credit limit before asking for the hard stuff — and worked with legal to keep it RBI-compliant. Completion went from 45% to 82%. [Full case study](/Works/onboarding.html)",
+      answer:
+        "Slice's onboarding had two things pulling in opposite directions: RBI's KYC rules required full documentation, and our own data showed that exact documentation step was where more than half of users dropped off. It would have been easy to treat that as unsolvable. Instead, I worked with legal early, and we found that nothing required all the KYC to happen upfront, just before the card was issued. So we flipped the order — show people their approved credit limit first, so they had a reason to push through the paperwork, and automated as much of the paperwork as we could. Completion went from 45% to 82%, without bending on compliance. [Read the full story](/Works/onboarding.html)",
+    },
+    {
+      match: /hardest part|balance rules|proud.*here/i,
+      page: /onboarding\.html/i,
+      answer:
+        "The hardest part was that compliance and conversion looked like they were fighting each other. RBI's rules said we needed full KYC, and our drop-off data said that exact step was pushing people away. The breakthrough wasn't a clever screen, it was a conversation with legal that uncovered we had more room on sequencing than anyone assumed. Showing the approved credit limit before the hard paperwork gave people a reason to keep going, and that one reorder took completion from 45% to 82%.",
     },
   ];
 
@@ -122,8 +180,18 @@
     console.log("[ask-archana] logged:", { question, answered, ts: new Date().toISOString() });
   }
 
-  function getDemoAnswer(question) {
-    for (const entry of DEMO_QA) {
+  function getDemoAnswer(question, path) {
+    // page-scoped entries are checked first so a generic phrase ("hardest
+    // part") resolves to the right project before falling through to
+    // broader matches.
+    const scoped = DEMO_QA.filter((e) => e.page);
+    const unscoped = DEMO_QA.filter((e) => !e.page);
+    for (const entry of scoped) {
+      if (entry.page.test(path) && entry.match.test(question)) {
+        return { text: entry.answer, answered: true };
+      }
+    }
+    for (const entry of unscoped) {
       if (entry.match.test(question)) {
         return { text: entry.answer, answered: true };
       }
@@ -147,7 +215,7 @@
     }
     // demo mode
     await new Promise((r) => setTimeout(r, 650 + Math.random() * 500));
-    return getDemoAnswer(question);
+    return getDemoAnswer(question, window.location.pathname);
   }
 
   function buildWidget() {
