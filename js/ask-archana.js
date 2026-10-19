@@ -9,12 +9,80 @@
     avatarUrl: "/images/Archana-profile.jpg",
   };
 
-  const SUGGESTIONS = [
+  // Suggestion chips change based on which page the widget is loaded on,
+  // so a visitor reading a specific case study sees questions about that
+  // project instead of generic ones. Matched against the URL path.
+  const SUGGESTION_SETS = [
+    {
+      match: /rsa\.html/i,
+      questions: [
+        "Why cut 14 questions down to 6?",
+        "How did ops react to the air pump idea?",
+        "What was your role vs the PM's here?",
+        "What would you do differently on this one?",
+      ],
+    },
+    {
+      match: /new-car\.html/i,
+      questions: [
+        "Why fork the journey by booking status?",
+        "Why kill the landing page at 1% rollout?",
+        "Isn't 5% Q2S a failure?",
+        "How much of the 3x was design vs pricing?",
+      ],
+    },
+    {
+      match: /onboarding\.html/i,
+      questions: [
+        "How did you get legal to approve this?",
+        "Why reject the other 3 directions?",
+        "Were the personas from real interviews?",
+        "What's your role vs the PM's?",
+      ],
+    },
+    {
+      match: /Works[\\/]design\.html/i, // work index / "all projects" page
+      questions: [
+        "Which project are you proudest of?",
+        "What do these projects have in common?",
+        "Tell me about the RSA project",
+        "Tell me about the new car insurance project",
+      ],
+    },
+    {
+      match: /about\.html/i,
+      questions: [
+        "How did you go from dev to design?",
+        "What's your design philosophy in practice?",
+        "How do you mentor at Growth School?",
+        "What does 'designing with AI, not through it' mean?",
+      ],
+    },
+    {
+      match: /contact\.html/i,
+      questions: [
+        "Are you open to new opportunities?",
+        "What kind of roles are you looking for?",
+        "Why should we hire you?",
+        "How can I reach you directly?",
+      ],
+    },
+  ];
+
+  const DEFAULT_SUGGESTIONS = [
+    // shown on the homepage, or any page that doesn't match a set above —
+    // a deliberate mix across projects, AI views, and background
     "How did you go from dev to design?",
     "What do you think about AI taking over design?",
     "Tell me about the RSA project",
     "How do you use AI day to day?",
   ];
+
+  function getSuggestionsForPage() {
+    const path = window.location.pathname;
+    const set = SUGGESTION_SETS.find((s) => s.match.test(path));
+    return set ? set.questions : DEFAULT_SUGGESTIONS;
+  }
 
   // Demo-only canned answers so you can see the widget working before the
   // real backend is wired up. Replace with live API once AA_CONFIG.apiUrl is set.
@@ -152,7 +220,7 @@
 
     function renderSuggestions() {
       suggestionsEl.innerHTML = "";
-      SUGGESTIONS.forEach((q) => {
+      getSuggestionsForPage().forEach((q) => {
         const chip = document.createElement("button");
         chip.className = "aa-suggestion-chip";
         chip.textContent = q;
