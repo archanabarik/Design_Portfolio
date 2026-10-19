@@ -6,7 +6,10 @@
 (function () {
   const AA_CONFIG = {
     apiUrl: null, // e.g. "https://ask-archana.yourname.workers.dev/chat" — once set, demo answers are skipped
-    avatarUrl: "/images/Archana-profile.jpg",
+    // Set to a real avatar image path once you've sent one — e.g.
+    // "/images/ai-avatar.png" — and it'll replace the animated gradient
+    // orb automatically, in both the launcher and the chat header.
+    avatarUrl: "",
   };
 
   // Suggestion chips change based on which page the widget is loaded on,
@@ -272,20 +275,35 @@
     return getDemoAnswer(question, window.location.pathname);
   }
 
+  // Builds the avatar markup used in both the launcher and the chat header.
+  // Starts as an animated gradient orb (no real photo needed) and swaps to
+  // the real image once AA_CONFIG.avatarUrl successfully loads — so this
+  // works today and just gets better once a real avatar image is added.
+  function avatarHTML(sizeClass) {
+    const img = AA_CONFIG.avatarUrl
+      ? `<img src="${AA_CONFIG.avatarUrl}" alt="" style="display:none"
+             onload="this.style.display='block'; this.parentElement.classList.remove('aa-avatar-fallback');"
+             onerror="this.remove();">`
+      : "";
+    return `<span class="aa-avatar aa-avatar-fallback ${sizeClass}">${img}</span>`;
+  }
+
   function buildWidget() {
     const launcher = document.createElement("button");
     launcher.id = "aa-launcher";
     launcher.setAttribute("aria-label", "Chat with Archana's AI assistant");
     launcher.innerHTML = `
-      <svg class="aa-chat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-      <svg class="aa-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      ${avatarHTML("")}
+      <span class="aa-close-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </span>
     `;
 
     const panel = document.createElement("div");
     panel.id = "aa-panel";
     panel.innerHTML = `
       <div id="aa-header">
-        <img src="${AA_CONFIG.avatarUrl}" alt="Archana Kumari" onerror="this.style.display='none'">
+        ${avatarHTML("")}
         <div id="aa-header-text">
           <p id="aa-header-title">Ask Archana</p>
           <p id="aa-header-sub"><span class="aa-dot"></span>AI version · usually accurate, always honest</p>
