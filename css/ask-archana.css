@@ -1,21 +1,20 @@
-/* Ask Archana — chat widget (AI-styled, intentionally distinct from the
-   rest of the site, to signal "this is the AI version of me") */
+/* Ask Archana — chat widget (light theme, matching the site's own
+   white/gray palette and existing violet gradient from .btn-gradient /
+   .card-expertise, instead of introducing a separate dark "AI" look) */
 :root {
   --aa-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --aa-gradient-2: linear-gradient(135deg, #764ba2 0%, #0ea5a4 100%);
-  --aa-bg: #0b0b12;
-  --aa-glass: rgba(255, 255, 255, 0.06);
-  --aa-glass-border: rgba(255, 255, 255, 0.12);
-  --aa-text: #f5f5f7;
-  --aa-text-muted: #a3a3b2;
-  --aa-bubble-bot: rgba(255, 255, 255, 0.07);
+  --aa-bg: #ffffff;
+  --aa-surface: #fafafa;
+  --aa-border: #e5e5e5;
+  --aa-text: #171717;
+  --aa-text-muted: #737373;
+  --aa-bubble-bot: #f5f5f5;
   --aa-radius: 20px;
   --aa-font: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --aa-glow: 0 0 0 0 rgba(118, 75, 162, 0.5);
 }
 
 @keyframes aa-pulse-ring {
-  0% { box-shadow: 0 0 0 0 rgba(118, 75, 162, 0.45); }
+  0% { box-shadow: 0 0 0 0 rgba(118, 75, 162, 0.35); }
   70% { box-shadow: 0 0 0 14px rgba(118, 75, 162, 0); }
   100% { box-shadow: 0 0 0 0 rgba(118, 75, 162, 0); }
 }
@@ -33,7 +32,7 @@
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  background: linear-gradient(135deg, #667eea, #764ba2, #0ea5a4, #667eea);
+  background: linear-gradient(135deg, #667eea, #764ba2, #a78bfa, #667eea);
   background-size: 300% 300%;
   animation: aa-orb-spin 6s ease infinite;
 }
@@ -62,17 +61,18 @@
   cursor: pointer;
   padding: 0;
   z-index: 9999;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.14);
   animation: aa-pulse-ring 2.8s ease-out infinite;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   font-family: var(--aa-font);
 }
-#aa-launcher:hover { transform: scale(1.06); }
+#aa-launcher:hover { transform: scale(1.06); box-shadow: 0 10px 28px rgba(0,0,0,0.2); }
 #aa-launcher .aa-avatar { width: 60px; height: 60px; }
 #aa-launcher .aa-close-badge {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: rgba(11, 11, 18, 0.78);
+  background: rgba(23, 23, 23, 0.72);
   display: none;
   align-items: center;
   justify-content: center;
@@ -91,12 +91,10 @@
   max-width: calc(100vw - 32px);
   height: 580px;
   max-height: calc(100vh - 140px);
-  background: linear-gradient(180deg, rgba(20,20,30,0.92), rgba(10,10,16,0.96));
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: var(--aa-bg);
   border-radius: var(--aa-radius);
-  border: 1px solid var(--aa-glass-border);
-  box-shadow: 0 24px 70px rgba(0,0,0,0.5), 0 0 0 1px rgba(118,75,162,0.15);
+  border: 1px solid var(--aa-border);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.14);
   display: none;
   flex-direction: column;
   overflow: hidden;
@@ -115,20 +113,19 @@
 
 #aa-header {
   padding: 18px 20px;
-  border-bottom: 1px solid var(--aa-glass-border);
+  border-bottom: 1px solid var(--aa-border);
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(255,255,255,0.03);
+  background: var(--aa-surface);
   position: relative;
 }
 #aa-header::after {
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: -1px;
-  height: 1px;
+  height: 2px;
   background: var(--aa-gradient);
-  opacity: 0.6;
 }
 #aa-header .aa-avatar { width: 38px; height: 38px; }
 #aa-header-text { flex: 1; min-width: 0; }
@@ -136,10 +133,7 @@
   font-size: 14px;
   font-weight: 600;
   margin: 0 0 2px 0;
-  background: var(--aa-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--aa-text);
 }
 #aa-header-sub {
   font-size: 11.5px;
@@ -153,8 +147,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #22d3a7;
-  box-shadow: 0 0 6px #22d3a7;
+  background: #22c55e;
   flex-shrink: 0;
 }
 
@@ -167,7 +160,7 @@
   gap: 10px;
 }
 #aa-messages::-webkit-scrollbar { width: 6px; }
-#aa-messages::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 3px; }
+#aa-messages::-webkit-scrollbar-thumb { background: var(--aa-border); border-radius: 3px; }
 
 .aa-msg {
   max-width: 86%;
@@ -181,11 +174,10 @@
 .aa-msg.bot {
   align-self: flex-start;
   background: var(--aa-bubble-bot);
-  border: 1px solid rgba(255,255,255,0.08);
   color: var(--aa-text);
   border-bottom-left-radius: 4px;
 }
-.aa-msg.bot a { color: #a8b8ff; }
+.aa-msg.bot a { color: #5b4ea3; text-decoration: underline; }
 .aa-msg.user {
   align-self: flex-end;
   background: var(--aa-gradient);
@@ -195,7 +187,6 @@
 .aa-msg.typing {
   align-self: flex-start;
   background: var(--aa-bubble-bot);
-  border: 1px solid rgba(255,255,255,0.08);
   padding: 13px 16px;
   display: flex;
   gap: 4px;
@@ -225,29 +216,29 @@
   font-size: 12px;
   padding: 7px 13px;
   border-radius: 999px;
-  border: 1px solid var(--aa-glass-border);
-  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--aa-border);
+  background: var(--aa-bg);
   color: var(--aa-text);
   cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 .aa-suggestion-chip:hover {
-  background: rgba(255,255,255,0.09);
-  border-color: rgba(118,75,162,0.6);
+  background: var(--aa-surface);
+  border-color: #a78bfa;
+  color: #5b4ea3;
 }
 
 #aa-input-row {
-  border-top: 1px solid var(--aa-glass-border);
+  border-top: 1px solid var(--aa-border);
   padding: 12px;
   display: flex;
   gap: 8px;
   align-items: flex-end;
-  background: rgba(255,255,255,0.02);
 }
 #aa-input {
   flex: 1;
-  border: 1px solid var(--aa-glass-border);
-  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--aa-border);
+  background: var(--aa-bg);
   border-radius: 20px;
   padding: 10px 16px;
   font-family: var(--aa-font);
@@ -258,7 +249,7 @@
   color: var(--aa-text);
 }
 #aa-input::placeholder { color: var(--aa-text-muted); }
-#aa-input:focus { border-color: rgba(118,75,162,0.7); box-shadow: 0 0 0 3px rgba(118,75,162,0.15); }
+#aa-input:focus { border-color: #a78bfa; box-shadow: 0 0 0 3px rgba(118,75,162,0.12); }
 #aa-send {
   width: 38px;
   height: 38px;
