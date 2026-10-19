@@ -16,28 +16,28 @@
     {
       match: /rsa\.html/i,
       questions: [
-        "What was the hardest part of this project?",
-        "What was Acko actually asking you to fix?",
-        "What are you most proud of here?",
-        "Tell me the story behind this one",
+        "What problem were you actually trying to solve?",
+        "What was the thinking behind your approach?",
+        "What was the toughest call you had to make?",
+        "How many rounds did this go through?",
       ],
     },
     {
       match: /new-car\.html/i,
       questions: [
-        "What was the hardest part of this project?",
-        "What was broken before you stepped in?",
-        "Is this impact mostly design, or the business?",
-        "Tell me the story behind this one",
+        "What problem were you actually trying to solve?",
+        "What was the thinking behind your approach?",
+        "What was the toughest call you had to make?",
+        "How many rounds did this go through?",
       ],
     },
     {
       match: /onboarding\.html/i,
       questions: [
-        "What was the hardest part of this project?",
-        "How did you balance rules with user experience?",
-        "What are you most proud of here?",
-        "Tell me the story behind this one",
+        "What problem were you actually trying to solve?",
+        "What was the thinking behind your approach?",
+        "What was the toughest call you had to make?",
+        "How many rounds did this go through?",
       ],
     },
     {
@@ -138,10 +138,28 @@
         "This one started at Acko, where roadside assistance already existed but almost nobody used it. The brief I was handed assumed the app itself was the problem — too clunky, needed fixing. But when I actually went through thousands of call records, the real story was different: most people didn't even know the service existed, and the ones who did didn't trust that help would actually show up. So the job wasn't to build a better form, it was to make someone stranded on the road, in the dark, actually feel like help was on the way. That shift changed everything downstream, right down to cutting the intake questions from 14 to 6, because nobody panicking on a highway is going to sit through 14 questions. It launched handling over 2,000 cases digitally, with resolution time cut in half. [Read the full story](/Works/rsa.html)",
     },
     {
-      match: /hardest part|proud.*here|story behind|what was.*asking|broken before/i,
+      match: /problem.*(solv|were.*(trying|actually))|problem statement/i,
       page: /rsa\.html/i,
       answer:
-        "Honestly, the hardest part wasn't the screens, it was realizing the problem itself had been misdiagnosed. The original brief said \"make the app better,\" but the data told a different story — people weren't struggling with the app, they simply didn't trust it enough to open it in an emergency. Once I reframed it that way, the real fight became cutting the intake form from 14 questions down to 6. Operations wanted all 14 for dispatch accuracy, but I kept asking: would someone stranded and scared actually answer 14 questions? We mapped which ones truly mattered, shipped with 6, and ops still got what they needed. It's a small decision on paper, but it's the kind of thing that changes whether a real person gets help faster.",
+        "On paper, the brief said the app needed improving. But when I actually went through thousands of real support calls, a different problem showed up: most people didn't even know the service existed, and the ones who did didn't trust that help would actually come. So the problem I ended up solving wasn't \"fix the app\" — it was \"make someone stranded on a dark road believe help is on its way, before they've even finished asking for it.\"",
+    },
+    {
+      match: /thinking behind|psychology|approach.*(behind|you used)/i,
+      page: /rsa\.html/i,
+      answer:
+        "The thinking came from one idea: a person calling for roadside help usually isn't thinking clearly, they're anxious, sometimes scared. So everything was built around three things — confirm that help is coming almost immediately, because uncertainty at that moment isn't just bad UX, it's a trust failure; show live tracking and real technician details so the anxiety has somewhere to go; and remove every decision that wasn't essential, because a stressed person shouldn't have to choose what kind of tow truck they need.",
+    },
+    {
+      match: /toughest call|difficult call|pushback|disagree/i,
+      page: /rsa\.html/i,
+      answer:
+        "The sharpest disagreement was over the intake form. Operations wanted 14 data points for accurate dispatch. I pushed back, because I didn't believe someone stranded at night, possibly scared, would patiently answer 14 questions. We went through the list together, found only 6 were genuinely decision-critical, and shipped with those. Ops still got the data they needed to dispatch properly — that was the fight worth having.",
+    },
+    {
+      match: /iteration|rounds|evolve/i,
+      page: /rsa\.html/i,
+      answer:
+        "It went through four real rounds. First was mapping the actual service — reading call records and reframing what the problem even was. Second was service flows and structure, where the question list got cut from 14 to 6. Third was high-fidelity screens and edge cases, including what to do when we legally couldn't help someone — like towing after an accident without a police report. Fourth is what actually shipped. It wasn't a straight line; the \"custody towing as default\" idea, for instance, only came up after we realized most users genuinely couldn't answer basic questions like what kind of tow truck their car needed.",
     },
 
     // -- new car insurance --
@@ -151,10 +169,28 @@
         "Acko's new car insurance journey was only converting 21% of visitors to a quote, and the obvious read was \"too many steps, simplify it.\" But when I dug into the data, I found two very different people being shown the exact same journey — someone who'd just started browsing cars, and someone picking theirs up from the dealer tomorrow. No wonder it wasn't working for either of them. So instead of trimming steps, we split the journey by intent. That structural change, not interface polish, is what actually moved the number — E2Q went from 21% to 65%, a 3x lift. [Read the full story](/Works/new-car.html)",
     },
     {
-      match: /hardest part|broken before|business|what was broken/i,
+      match: /problem.*(solv|were.*(trying|actually))|problem statement/i,
       page: /new-car\.html/i,
       answer:
-        "The hardest part was realizing this wasn't really a funnel problem, even though the data made it look like one. The brief said \"too many steps,\" but the real issue was that one journey was trying to serve two completely different people at once. Splitting it by purchase intent was the design call that unlocked most of the lift. That said, I'd be lying if I claimed it was all design — quote-to-sale stayed flat around 5% the whole time, because that depends on when someone's car physically arrives, not on how good the app is. Knowing which numbers design can actually move, and which ones it can't, is part of doing this work honestly.",
+        "On the surface it looked like a funnel problem — only 21% of visitors turned into a quote, so the obvious fix was \"remove friction, cut steps.\" But when I actually looked at the data, I found two completely different people being shown the exact same journey: someone who'd just started browsing cars, weeks from any decision, and someone picking theirs up from the dealer tomorrow. The real problem wasn't friction, it was that one experience was trying to serve two very different moments at once.",
+    },
+    {
+      match: /thinking behind|psychology|approach.*(behind|you used)/i,
+      page: /new-car\.html/i,
+      answer:
+        "The core idea was that intent should decide the experience, not one generic flow for everyone. So early on, we asked a simple question: where are you in buying this car — booked, finalised but not booked, or still deciding? Each answer sent the person down a different path, built for what they actually needed at that moment instead of asking everyone to answer the same questions regardless of how ready they were.",
+    },
+    {
+      match: /toughest call|difficult call|pushback|disagree/i,
+      page: /new-car\.html/i,
+      answer:
+        "The toughest call was killing a landing page we'd specifically built to counter dealer misinformation — built with real settlement data and named garages, the kind of thing people usually get attached to. At a 1% rollout, the data showed almost nobody was scrolling past the top of it. It was tempting to keep tweaking it instead of admitting it wasn't working, but the signal was clear, so we cut it rather than polish something that wasn't earning its place.",
+    },
+    {
+      match: /iteration|rounds|evolve/i,
+      page: /new-car\.html/i,
+      answer:
+        "We ran it as three staged releases rather than one big launch. At 1% of traffic, it actually performed worse than the old baseline — that's where we caught the landing page problem and some confusing plan naming. At 50%, after fixing those, it finally beat baseline for the first time. At full rollout, it stabilised at 65%, three times where it started. The useful part of going slow wasn't what worked, it was catching what didn't, early enough to fix.",
     },
 
     // -- slice onboarding --
@@ -164,10 +200,28 @@
         "Slice's onboarding had two things pulling in opposite directions: RBI's KYC rules required full documentation, and our own data showed that exact documentation step was where more than half of users dropped off. It would have been easy to treat that as unsolvable. Instead, I worked with legal early, and we found that nothing required all the KYC to happen upfront, just before the card was issued. So we flipped the order — show people their approved credit limit first, so they had a reason to push through the paperwork, and automated as much of the paperwork as we could. Completion went from 45% to 82%, without bending on compliance. [Read the full story](/Works/onboarding.html)",
     },
     {
-      match: /hardest part|balance rules|proud.*here/i,
+      match: /problem.*(solv|were.*(trying|actually))|problem statement/i,
       page: /onboarding\.html/i,
       answer:
-        "The hardest part was that compliance and conversion looked like they were fighting each other. RBI's rules said we needed full KYC, and our drop-off data said that exact step was pushing people away. The breakthrough wasn't a clever screen, it was a conversation with legal that uncovered we had more room on sequencing than anyone assumed. Showing the approved credit limit before the hard paperwork gave people a reason to keep going, and that one reorder took completion from 45% to 82%.",
+        "It looked like a trade-off between following RBI's KYC rules and keeping users from leaving — and over half of people were abandoning before they even got activated. But the real problem wasn't the rules themselves, it was that we were asking people to hand over sensitive documents before giving them any reason to trust us back, like proof they'd actually been approved. That's the gap I ended up solving for.",
+    },
+    {
+      match: /thinking behind|psychology|approach.*(behind|you used)/i,
+      page: /onboarding\.html/i,
+      answer:
+        "The psychology was simple, and it came straight from user interviews: people said being asked for documents before any sign of approval felt unfair, almost like being judged before being heard. So the idea was to show them a win early — their actual approved credit limit — before asking for the harder paperwork. Once someone has something real to lose, they're far more willing to push through a tedious step.",
+    },
+    {
+      match: /toughest call|difficult call|pushback|disagree/i,
+      page: /onboarding\.html/i,
+      answer:
+        "The toughest call was choosing to bring legal into the conversation early instead of treating compliance as something to work around later. It would've been easier to just redesign the screens and hope for the best. Instead, that early conversation is what revealed we had more flexibility on sequencing than anyone assumed — KYC just had to be complete before the card was issued, not before the user saw any value.",
+    },
+    {
+      match: /iteration|rounds|evolve/i,
+      page: /onboarding\.html/i,
+      answer:
+        "I explored four different directions before landing on one. Full KYC upfront was the safe, compliant option, but it kept the same drop-offs. A shortened form helped a little but left the real friction untouched. Parallel credit-check-and-KYC was faster on paper, but if either step failed, the user walked away with nothing — a worse failure mode than what we had. The one we shipped was approval-first with automated KYC steps: it removed the three highest-drop-off steps while staying fully compliant, which is why it's the one that actually moved the number.",
     },
   ];
 
